@@ -6,6 +6,7 @@ import Stats from "@/components/Stats";
 import Timeline from "@/components/Timeline";
 import Leadership from "@/components/Leadership";
 import Contact from "@/components/Contact";
+import Expertise from "@/components/Expertise";
 
 export default function Home() {
   return (
@@ -20,6 +21,11 @@ export default function Home() {
       {/* ABOUT */}
       <div id="about">
         <About />
+      </div>
+
+      {/* EXPERTISE */}
+      <div id="expertise">
+        <Expertise />
       </div>
 
       {/* EXPERIENCE */}
