@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function FadeUp({
-  children
+  children,
 }: {
   children: React.ReactNode;
 }) {

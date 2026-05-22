@@ -1,10 +1,11 @@
 "use client";
 
-import FadeUp from "./FadeUp";
+import FadeUp from "@/components/FadeUp";
 
 export default function Expertise() {
 
   const expertise = [
+
     {
       title: "Business Expansion",
       description:
@@ -40,6 +41,7 @@ export default function Expertise() {
       description:
         "Leading multi-functional teams across acquisitions, operations, customer management, onboarding, and strategic business execution."
     }
+
   ];
 
   return (
@@ -60,7 +62,7 @@ export default function Expertise() {
           }}
         >
 
-          {/* TOP SECTION */}
+          {/* TOP */}
           <div
             style={{
               textAlign: "center",
@@ -121,6 +123,7 @@ export default function Expertise() {
 
               <div
                 key={index}
+
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
@@ -134,7 +137,7 @@ export default function Expertise() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-10px)";
                   e.currentTarget.style.border =
-                    "1px solid rgba(96,165,250,0.4)";
+                    "1px solid rgba(96,165,250,0.5)";
                 }}
 
                 onMouseLeave={(e) => {
