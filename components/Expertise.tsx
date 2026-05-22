@@ -1,3 +1,7 @@
+"use client";
+
+import FadeUp from "./FadeUp";
+
 export default function Expertise() {
 
   const expertise = [
@@ -39,118 +43,138 @@ export default function Expertise() {
   ];
 
   return (
-    <section
-      style={{
-        padding: "140px 24px",
-        position: "relative"
-      }}
-    >
 
-      <div
+    <FadeUp>
+
+      <section
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto"
+          padding: "140px 24px",
+          position: "relative"
         }}
       >
 
-        {/* TOP SECTION */}
         <div
           style={{
-            textAlign: "center",
-            marginBottom: "80px"
+            maxWidth: "1400px",
+            margin: "0 auto"
           }}
         >
 
-          <p
+          {/* TOP SECTION */}
+          <div
             style={{
-              color: "#60A5FA",
-              textTransform: "uppercase",
-              letterSpacing: "5px",
-              fontSize: "14px",
-              marginBottom: "20px"
+              textAlign: "center",
+              marginBottom: "80px"
             }}
           >
-            Core Expertise
-          </p>
 
-          <h2
-            style={{
-              fontSize: "clamp(42px,5vw,72px)",
-              lineHeight: "1.1",
-              marginBottom: "24px"
-            }}
-          >
-            Expertise Built Through
-            <br />
-            Execution & Leadership
-          </h2>
-
-          <p
-            style={{
-              color: "#9CA3AF",
-              fontSize: "20px",
-              lineHeight: "1.8",
-              maxWidth: "900px",
-              margin: "0 auto"
-            }}
-          >
-            A combination of operational execution, acquisition management,
-            business scaling, strategic leadership, and growth-focused expansion
-            across Mumbai’s evolving real estate ecosystem.
-          </p>
-
-        </div>
-
-        {/* CARDS */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-            gap: "28px"
-          }}
-        >
-
-          {expertise.map((item, index) => (
-            <div
-              key={index}
+            <p
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "32px",
-                padding: "40px",
-                backdropFilter: "blur(20px)",
-                transition: "0.4s",
-                cursor: "pointer"
+                color: "#60A5FA",
+                textTransform: "uppercase",
+                letterSpacing: "5px",
+                fontSize: "14px",
+                marginBottom: "20px"
               }}
             >
+              Core Expertise
+            </p>
 
-              <h3
+            <h2
+              style={{
+                fontSize: "clamp(42px,5vw,72px)",
+                lineHeight: "1.1",
+                marginBottom: "24px"
+              }}
+            >
+              Expertise Built Through
+              <br />
+              Execution & Leadership
+            </h2>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                fontSize: "20px",
+                lineHeight: "1.8",
+                maxWidth: "900px",
+                margin: "0 auto"
+              }}
+            >
+              A combination of operational execution, acquisition management,
+              business scaling, strategic leadership, and growth-focused expansion
+              across Mumbai’s evolving real estate ecosystem.
+            </p>
+
+          </div>
+
+          {/* CARDS */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+              gap: "28px"
+            }}
+          >
+
+            {expertise.map((item, index) => (
+
+              <div
+                key={index}
                 style={{
-                  fontSize: "30px",
-                  marginBottom: "24px",
-                  color: "white"
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: "32px",
+                  padding: "40px",
+                  backdropFilter: "blur(20px)",
+                  transition: "0.4s",
+                  cursor: "pointer"
+                }}
+
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-10px)";
+                  e.currentTarget.style.border =
+                    "1px solid rgba(96,165,250,0.4)";
+                }}
+
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0px)";
+                  e.currentTarget.style.border =
+                    "1px solid rgba(255,255,255,0.08)";
                 }}
               >
-                {item.title}
-              </h3>
 
-              <p
-                style={{
-                  color: "#9CA3AF",
-                  lineHeight: "1.9",
-                  fontSize: "17px"
-                }}
-              >
-                {item.description}
-              </p>
+                <h3
+                  style={{
+                    fontSize: "30px",
+                    marginBottom: "24px",
+                    color: "white"
+                  }}
+                >
+                  {item.title}
+                </h3>
 
-            </div>
-          ))}
+                <p
+                  style={{
+                    color: "#9CA3AF",
+                    lineHeight: "1.9",
+                    fontSize: "17px"
+                  }}
+                >
+                  {item.description}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-    </section>
+    </FadeUp>
+
   );
 }
