@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
@@ -9,12 +10,34 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <Layout>
+
+      {/* NAVBAR */}
+      <Navbar />
+
+      {/* HERO */}
       <Hero />
-      <About />
-      <Stats />
-      <Timeline />
-      <Leadership />
-      <Contact />
+
+      {/* ABOUT */}
+      <div id="about">
+        <About />
+      </div>
+
+      {/* EXPERIENCE */}
+      <div id="experience">
+        <Stats />
+        <Timeline />
+      </div>
+
+      {/* LEADERSHIP */}
+      <div id="leadership">
+        <Leadership />
+      </div>
+
+      {/* CONTACT */}
+      <div id="contact">
+        <Contact />
+      </div>
+
     </Layout>
   );
 }
