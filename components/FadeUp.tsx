@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function FadeUp({
   children,
 }: {
@@ -9,32 +7,8 @@ export default function FadeUp({
 }) {
 
   return (
-
-    <motion.div
-
-      initial={{
-        opacity: 0,
-        y: 80
-      }}
-
-      whileInView={{
-        opacity: 1,
-        y: 0
-      }}
-
-      transition={{
-        duration: 0.8,
-        ease: "easeOut"
-      }}
-
-      viewport={{
-        once: true
-      }}
-    >
-
+    <div>
       {children}
-
-    </motion.div>
-
+    </div>
   );
 }
