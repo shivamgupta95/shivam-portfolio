@@ -4,202 +4,108 @@ export default function Footer() {
 
     <footer
       style={{
-        position: "relative",
-        padding: "120px 24px 60px",
+        padding: "80px 24px",
         borderTop: "1px solid rgba(255,255,255,0.08)",
-        overflow: "hidden"
+        marginTop: "120px"
       }}
     >
-
-      {/* BACKGROUND GLOW */}
-      <div
-        style={{
-          position: "absolute",
-          top: "-200px",
-          left: "-200px",
-          width: "500px",
-          height: "500px",
-          background: "rgba(59,130,246,0.12)",
-          filter: "blur(140px)",
-          borderRadius: "999px"
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "-200px",
-          right: "-200px",
-          width: "500px",
-          height: "500px",
-          background: "rgba(168,85,247,0.12)",
-          filter: "blur(140px)",
-          borderRadius: "999px"
-        }}
-      />
 
       <div
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          position: "relative",
-          zIndex: 2
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "40px",
+          flexWrap: "wrap"
         }}
       >
 
-        {/* TOP AREA */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "60px",
-            marginBottom: "80px"
-          }}
-        >
+        {/* LEFT */}
+        <div>
 
-          {/* LEFT */}
-          <div>
-
-            <p
-              style={{
-                color: "#60A5FA",
-                letterSpacing: "5px",
-                textTransform: "uppercase",
-                fontSize: "13px",
-                marginBottom: "20px"
-              }}
-            >
-              Shivam Gupta
-            </p>
-
-            <h2
-              style={{
-                fontSize: "clamp(38px,5vw,64px)",
-                lineHeight: "1.1",
-                marginBottom: "28px"
-              }}
-            >
-              Building Businesses
-              <br />
-              Through Execution
-            </h2>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                lineHeight: "1.9",
-                fontSize: "18px",
-                maxWidth: "520px"
-              }}
-            >
-              Business Head with expertise across acquisitions,
-              luxury real estate, strategic expansion,
-              operational leadership, and business growth execution
-              across Mumbai’s real estate ecosystem.
-            </p>
-
-          </div>
-
-          {/* RIGHT */}
-          <div
+          <h2
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "22px",
-              justifyContent: "center"
+              fontSize: "42px",
+              marginBottom: "20px"
             }}
           >
+            Shivam Gupta
+          </h2>
 
-            <a
-              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
-              target="_blank"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "18px"
-              }}
-            >
-              LinkedIn Profile →
-            </a>
-
-            <a
-              href="mailto:guptashivam251095@gmail.com"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "18px"
-              }}
-            >
-              guptashivam251095@gmail.com
-            </a>
-
-            <a
-              href="tel:+917738753396"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                fontSize: "18px"
-              }}
-            >
-              +91 7738753396
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              style={{
-                display: "inline-block",
-                marginTop: "20px",
-                background: "#2563EB",
-                padding: "18px 28px",
-                borderRadius: "18px",
-                textDecoration: "none",
-                color: "white",
-                width: "fit-content",
-                fontWeight: 600
-              }}
-            >
-              Download Resume
-            </a>
-
-          </div>
+          <p
+            style={{
+              color: "#9CA3AF",
+              lineHeight: "1.8",
+              maxWidth: "500px"
+            }}
+          >
+            Business Head specializing in real estate operations,
+            acquisitions, expansion, strategic growth, and luxury
+            real estate execution across Mumbai.
+          </p>
 
         </div>
 
-        {/* BOTTOM */}
+        {/* RIGHT */}
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            paddingTop: "30px",
             display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "20px"
+            flexDirection: "column",
+            gap: "16px"
           }}
         >
 
-          <p
+          <a
+            href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+            target="_blank"
             style={{
-              color: "#6B7280",
-              fontSize: "15px"
+              color: "white",
+              textDecoration: "none"
             }}
           >
-            © 2026 Shivam Gupta. All rights reserved.
-          </p>
+            LinkedIn Profile
+          </a>
 
-          <p
+          <a
+            href="mailto:guptashivam251095@gmail.com"
             style={{
-              color: "#6B7280",
-              fontSize: "15px"
+              color: "white",
+              textDecoration: "none"
             }}
           >
-            Mumbai • Real Estate • Business Leadership
-          </p>
+            guptashivam251095@gmail.com
+          </a>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            style={{
+              color: "#60A5FA",
+              textDecoration: "none"
+            }}
+          >
+            Download Resume
+          </a>
 
         </div>
 
       </div>
 
+      {/* BOTTOM */}
+      <div
+        style={{
+          marginTop: "60px",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          paddingTop: "20px",
+          textAlign: "center",
+          color: "#6B7280"
+        }}
+      >
+        © 2026 Shivam Gupta. All rights reserved.
+      </div>
+
     </footer>
+
   );
 }
