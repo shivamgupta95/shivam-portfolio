@@ -7,9 +7,12 @@ import Timeline from "@/components/Timeline";
 import Leadership from "@/components/Leadership";
 import Contact from "@/components/Contact";
 import Expertise from "@/components/Expertise";
+import Achievements from "@/components/Achievements";
 
 export default function Home() {
+
   return (
+
     <Layout>
 
       {/* NAVBAR */}
@@ -26,6 +29,11 @@ export default function Home() {
       {/* EXPERTISE */}
       <div id="expertise">
         <Expertise />
+      </div>
+
+      {/* ACHIEVEMENTS */}
+      <div id="achievements">
+        <Achievements />
       </div>
 
       {/* EXPERIENCE */}
@@ -45,5 +53,6 @@ export default function Home() {
       </div>
 
     </Layout>
+
   );
 }
