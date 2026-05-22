@@ -3,11 +3,12 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
+import Expertise from "@/components/Expertise";
+import Achievements from "@/components/Achievements";
 import Timeline from "@/components/Timeline";
 import Leadership from "@/components/Leadership";
 import Contact from "@/components/Contact";
-import Expertise from "@/components/Expertise";
-import Achievements from "@/components/Achievements";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -19,11 +20,18 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
 
       {/* ABOUT */}
       <div id="about">
         <About />
+      </div>
+
+      {/* STATS */}
+      <div id="stats">
+        <Stats />
       </div>
 
       {/* EXPERTISE */}
@@ -36,9 +44,8 @@ export default function Home() {
         <Achievements />
       </div>
 
-      {/* EXPERIENCE */}
-      <div id="experience">
-        <Stats />
+      {/* TIMELINE */}
+      <div id="journey">
         <Timeline />
       </div>
 
@@ -51,6 +58,9 @@ export default function Home() {
       <div id="contact">
         <Contact />
       </div>
+
+      {/* FOOTER */}
+      <Footer />
 
     </Layout>
 
