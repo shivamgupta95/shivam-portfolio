@@ -78,6 +78,5 @@ export default function Home() {
       <Whatsapp />
 
     </main>
-
   );
 }
