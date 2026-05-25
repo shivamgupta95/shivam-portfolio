@@ -16,6 +16,7 @@ import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
 import ThemeToggle from "../components/ThemeToggle";
+import SocialBar from "../components/SocialBar";
 
 export default function Home() {
 
@@ -38,6 +39,8 @@ export default function Home() {
       <Cursor />
 
       <ThemeToggle />
+
+      <SocialBar />
 
       <Topbar />
 
