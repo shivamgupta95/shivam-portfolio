@@ -12,7 +12,7 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingTop: "180px",
+        paddingTop: "160px",
         paddingBottom: "100px",
         paddingLeft: "20px",
         paddingRight: "20px",
@@ -21,7 +21,6 @@ export default function Hero() {
       }}
     >
 
-      {/* MAIN CONTAINER */}
       <div
         style={{
           maxWidth: "1400px",
@@ -29,23 +28,27 @@ export default function Hero() {
           display: "grid",
           gridTemplateColumns:
             "repeat(auto-fit,minmax(320px,1fr))",
-          gap: "70px",
+          gap: "60px",
           alignItems: "center",
           position: "relative",
           zIndex: 2,
         }}
       >
 
-        {/* LEFT SIDE */}
-        <div>
+        {/* LEFT */}
+        <div
+          style={{
+            textAlign: "left",
+          }}
+        >
 
           <p
             style={{
               color: "#60A5FA",
               textTransform: "uppercase",
-              letterSpacing: "5px",
-              marginBottom: "22px",
-              fontSize: "14px",
+              letterSpacing: "4px",
+              marginBottom: "20px",
+              fontSize: "13px",
               fontWeight: "700",
             }}
           >
@@ -54,10 +57,11 @@ export default function Hero() {
 
           <h1
             style={{
-              fontSize: "clamp(70px,9vw,120px)",
+              fontSize: "clamp(54px,10vw,110px)",
               lineHeight: "0.95",
-              marginBottom: "30px",
+              marginBottom: "28px",
               fontWeight: "800",
+              color: "white",
             }}
           >
             Shivam
@@ -69,9 +73,9 @@ export default function Hero() {
             style={{
               color: "#9CA3AF",
               lineHeight: "2",
-              fontSize: "22px",
-              maxWidth: "760px",
-              marginBottom: "50px",
+              fontSize: "20px",
+              maxWidth: "700px",
+              marginBottom: "45px",
             }}
           >
             Business leader specializing in acquisitions,
@@ -84,7 +88,7 @@ export default function Hero() {
           <div
             style={{
               display: "flex",
-              gap: "20px",
+              gap: "18px",
               flexWrap: "wrap",
             }}
           >
@@ -94,12 +98,12 @@ export default function Hero() {
               target="_blank"
               style={{
                 background: "#2563EB",
-                padding: "20px 36px",
+                padding: "18px 30px",
                 borderRadius: "18px",
                 color: "white",
                 textDecoration: "none",
                 fontWeight: "700",
-                fontSize: "18px",
+                fontSize: "16px",
                 boxShadow:
                   "0 0 35px rgba(37,99,235,0.35)",
               }}
@@ -108,28 +112,28 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://www.linkedin.com"
+              href="https://linkedin.com"
               target="_blank"
               style={{
                 border:
                   "1px solid rgba(255,255,255,0.12)",
-                padding: "20px 36px",
+                padding: "18px 30px",
                 borderRadius: "18px",
                 color: "white",
                 textDecoration: "none",
                 fontWeight: "700",
-                fontSize: "18px",
+                fontSize: "16px",
                 backdropFilter: "blur(12px)",
               }}
             >
-              LinkedIn Profile
+              LinkedIn
             </a>
 
           </div>
 
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT */}
         <div
           style={{
             display: "flex",
@@ -143,8 +147,8 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
-              width: "650px",
-              height: "650px",
+              width: "500px",
+              height: "500px",
               background:
                 "radial-gradient(circle, rgba(37,99,235,0.28), transparent 70%)",
               filter: "blur(90px)",
@@ -157,16 +161,18 @@ export default function Hero() {
             style={{
               position: "relative",
               zIndex: 2,
-              borderRadius: "40px",
+              borderRadius: "36px",
               overflow: "hidden",
               border:
                 "1px solid rgba(255,255,255,0.08)",
               background:
                 "rgba(255,255,255,0.04)",
               backdropFilter: "blur(20px)",
-              padding: "18px",
+              padding: "16px",
               boxShadow:
                 "0 0 60px rgba(37,99,235,0.18)",
+              width: "100%",
+              maxWidth: "450px",
             }}
           >
 
@@ -175,90 +181,11 @@ export default function Hero() {
               alt="Shivam Gupta"
               style={{
                 width: "100%",
-                maxWidth: "500px",
-                borderRadius: "28px",
+                borderRadius: "24px",
                 display: "block",
                 objectFit: "cover",
               }}
             />
-
-          </div>
-
-          {/* FLOATING CARD 1 */}
-          <div
-            style={{
-              position: "absolute",
-              top: "40px",
-              left: "-60px",
-              background: "rgba(255,255,255,0.06)",
-              border:
-                "1px solid rgba(255,255,255,0.08)",
-              backdropFilter: "blur(18px)",
-              padding: "22px 26px",
-              borderRadius: "24px",
-              boxShadow:
-                "0 0 30px rgba(0,0,0,0.25)",
-              zIndex: 5,
-            }}
-          >
-
-            <h3
-              style={{
-                fontSize: "32px",
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              ₹4000Cr+
-            </h3>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                margin: 0,
-              }}
-            >
-              GMV Managed
-            </p>
-
-          </div>
-
-          {/* FLOATING CARD 2 */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "60px",
-              right: "-50px",
-              background: "rgba(255,255,255,0.06)",
-              border:
-                "1px solid rgba(255,255,255,0.08)",
-              backdropFilter: "blur(18px)",
-              padding: "22px 26px",
-              borderRadius: "24px",
-              boxShadow:
-                "0 0 30px rgba(0,0,0,0.25)",
-              zIndex: 5,
-            }}
-          >
-
-            <h3
-              style={{
-                fontSize: "32px",
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              120+
-            </h3>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                margin: 0,
-              }}
-            >
-              Properties Onboarded
-            </p>
 
           </div>
 
