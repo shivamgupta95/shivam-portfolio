@@ -8,41 +8,24 @@ export default function Hero() {
       style={{
         minHeight: "100vh",
         background:
-          "linear-gradient(to bottom, #050816 0%, #0B1120 100%)",
+          "linear-gradient(to bottom, #050505 0%, #0F0F0F 100%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: "140px 24px 100px",
         overflow: "hidden",
-        position: "relative",
       }}
     >
-
-      {/* BACKGROUND GLOW */}
-      <div
-        style={{
-          position: "absolute",
-          width: "700px",
-          height: "700px",
-          background:
-            "radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%)",
-          filter: "blur(120px)",
-          right: "-150px",
-          top: "-100px",
-        }}
-      />
 
       <div
         style={{
           width: "100%",
-          maxWidth: "1400px",
+          maxWidth: "1450px",
           display: "grid",
           gridTemplateColumns:
             "repeat(auto-fit,minmax(340px,1fr))",
           gap: "100px",
           alignItems: "center",
-          position: "relative",
-          zIndex: 2,
         }}
       >
 
@@ -51,24 +34,24 @@ export default function Hero() {
 
           <p
             style={{
-              color: "#60A5FA",
+              color: "#C8A96B",
               textTransform: "uppercase",
               letterSpacing: "5px",
               fontSize: "13px",
-              marginBottom: "26px",
+              marginBottom: "30px",
               fontWeight: "700",
             }}
           >
-            Business Head • Real Estate Leadership
+            Luxury Real Estate • Business Leadership
           </p>
 
           <h1
             style={{
-              fontSize: "clamp(76px,10vw,145px)",
+              fontSize: "clamp(76px,10vw,150px)",
               lineHeight: "0.9",
               fontWeight: "800",
               color: "white",
-              marginBottom: "34px",
+              marginBottom: "36px",
               letterSpacing: "-5px",
             }}
           >
@@ -79,25 +62,25 @@ export default function Hero() {
 
           <p
             style={{
-              color: "#9CA3AF",
+              color: "#B0B0B0",
               fontSize: "22px",
               lineHeight: "2",
-              maxWidth: "720px",
-              marginBottom: "50px",
+              maxWidth: "760px",
+              marginBottom: "55px",
             }}
           >
-            Business Head specializing in acquisitions,
+            Business Head specializing in luxury real estate,
+            acquisitions,
             strategic expansion,
-            luxury real estate growth,
-            operational leadership,
-            and execution-focused scaling across Mumbai.
+            operational excellence,
+            and execution-focused growth across Mumbai Metropolitan Region.
           </p>
 
           {/* BUTTONS */}
           <div
             style={{
               display: "flex",
-              gap: "20px",
+              gap: "22px",
               flexWrap: "wrap",
             }}
           >
@@ -106,10 +89,10 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               style={{
-                background: "white",
-                color: "#050816",
-                padding: "18px 34px",
-                borderRadius: "16px",
+                background: "#C8A96B",
+                color: "#050505",
+                padding: "18px 36px",
+                borderRadius: "14px",
                 textDecoration: "none",
                 fontWeight: "700",
                 fontSize: "16px",
@@ -125,12 +108,11 @@ export default function Hero() {
                 border:
                   "1px solid rgba(255,255,255,0.12)",
                 color: "white",
-                padding: "18px 34px",
-                borderRadius: "16px",
+                padding: "18px 36px",
+                borderRadius: "14px",
                 textDecoration: "none",
                 fontWeight: "700",
                 fontSize: "16px",
-                backdropFilter: "blur(14px)",
                 background:
                   "rgba(255,255,255,0.03)",
               }}
@@ -167,10 +149,10 @@ export default function Hero() {
               style={{
                 width: "100%",
                 display: "block",
-                borderRadius: "32px",
+                borderRadius: "30px",
                 objectFit: "cover",
                 boxShadow:
-                  "0 40px 80px rgba(0,0,0,0.45)",
+                  "0 40px 100px rgba(0,0,0,0.55)",
               }}
             />
 
@@ -183,23 +165,22 @@ export default function Hero() {
               top: "40px",
               left: "-40px",
               background:
-                "rgba(255,255,255,0.06)",
+                "rgba(15,15,15,0.9)",
               border:
-                "1px solid rgba(255,255,255,0.08)",
-              backdropFilter: "blur(18px)",
-              padding: "22px 26px",
-              borderRadius: "24px",
+                "1px solid rgba(200,169,107,0.2)",
+              padding: "24px 28px",
+              borderRadius: "22px",
               boxShadow:
-                "0 20px 50px rgba(0,0,0,0.35)",
+                "0 20px 60px rgba(0,0,0,0.4)",
               zIndex: 5,
             }}
           >
 
             <h3
               style={{
-                color: "white",
-                fontSize: "34px",
-                marginBottom: "8px",
+                color: "#C8A96B",
+                fontSize: "36px",
+                marginBottom: "10px",
               }}
             >
               ₹4000Cr+
@@ -207,7 +188,7 @@ export default function Hero() {
 
             <p
               style={{
-                color: "#9CA3AF",
+                color: "#9F9F9F",
                 margin: 0,
                 fontSize: "15px",
               }}
@@ -224,23 +205,22 @@ export default function Hero() {
               bottom: "40px",
               right: "-40px",
               background:
-                "rgba(255,255,255,0.06)",
+                "rgba(15,15,15,0.9)",
               border:
-                "1px solid rgba(255,255,255,0.08)",
-              backdropFilter: "blur(18px)",
-              padding: "22px 26px",
-              borderRadius: "24px",
+                "1px solid rgba(200,169,107,0.2)",
+              padding: "24px 28px",
+              borderRadius: "22px",
               boxShadow:
-                "0 20px 50px rgba(0,0,0,0.35)",
+                "0 20px 60px rgba(0,0,0,0.4)",
               zIndex: 5,
             }}
           >
 
             <h3
               style={{
-                color: "white",
-                fontSize: "34px",
-                marginBottom: "8px",
+                color: "#C8A96B",
+                fontSize: "36px",
+                marginBottom: "10px",
               }}
             >
               120+
@@ -248,7 +228,7 @@ export default function Hero() {
 
             <p
               style={{
-                color: "#9CA3AF",
+                color: "#9F9F9F",
                 margin: 0,
                 fontSize: "15px",
               }}

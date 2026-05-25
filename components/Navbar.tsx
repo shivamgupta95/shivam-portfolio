@@ -40,21 +40,22 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "20px 28px",
-          background: "rgba(5,8,22,0.75)",
+          padding: "20px 30px",
+          background: "rgba(10,10,10,0.85)",
           backdropFilter: "blur(16px)",
           borderRadius: "18px",
-          border: "1px solid rgba(255,255,255,0.06)",
+          border:
+            "1px solid rgba(255,255,255,0.05)",
         }}
       >
 
         <h2
           style={{
-            color: "white",
+            color: "#C8A96B",
             fontSize: "20px",
             margin: 0,
             fontWeight: "700",
-            letterSpacing: "-0.5px",
+            letterSpacing: "1px",
           }}
         >
           Shivam Gupta
@@ -63,7 +64,7 @@ export default function Navbar() {
         <nav
           style={{
             display: "flex",
-            gap: "30px",
+            gap: "32px",
             flexWrap: "wrap",
           }}
         >
@@ -74,7 +75,7 @@ export default function Navbar() {
               key={index}
               href={item.href}
               style={{
-                color: "#D1D5DB",
+                color: "#D6D6D6",
                 textDecoration: "none",
                 fontSize: "15px",
                 fontWeight: "600",
