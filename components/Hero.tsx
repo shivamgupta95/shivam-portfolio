@@ -27,13 +27,15 @@ export default function Hero() {
           maxWidth: "1450px",
           display: "grid",
           gridTemplateColumns:
-            isMobile ? "1fr" : "repeat(auto-fit,minmax(340px,1fr))",
+            isMobile
+              ? "1fr"
+              : "repeat(auto-fit,minmax(340px,1fr))",
           gap: isMobile ? "70px" : "100px",
           alignItems: "center",
         }}
       >
 
-        {/* LEFT */}
+        {/* LEFT SIDE */}
         <div
           style={{
             textAlign: isMobile ? "center" : "left",
@@ -86,6 +88,7 @@ export default function Hero() {
             and execution-focused growth across Mumbai Metropolitan Region.
           </p>
 
+          {/* BUTTONS */}
           <div
             style={{
               display: "flex",
@@ -97,7 +100,6 @@ export default function Hero() {
             }}
           >
 
-            {/* RESUME BUTTON */}
             <a
               href="/shivam-gupta-resume-2026.pdf"
               target="_blank"
@@ -116,7 +118,6 @@ export default function Hero() {
               Resume
             </a>
 
-            {/* LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/shivam-gupta-a86963285"
               target="_blank"
@@ -143,7 +144,7 @@ export default function Hero() {
 
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE */}
         <div
           style={{
             display: "flex",
@@ -176,6 +177,92 @@ export default function Hero() {
                   "0 40px 100px rgba(0,0,0,0.55)",
               }}
             />
+
+          </div>
+
+          {/* FLOATING CARD 1 */}
+          <div
+            style={{
+              position: "absolute",
+              top: isMobile ? "-20px" : "40px",
+              left: isMobile ? "-10px" : "-40px",
+              background:
+                "rgba(15,15,15,0.88)",
+              border:
+                "1px solid rgba(200,169,107,0.2)",
+              padding: isMobile
+                ? "16px 18px"
+                : "24px 28px",
+              borderRadius: "22px",
+              boxShadow:
+                "0 20px 60px rgba(0,0,0,0.4)",
+              zIndex: 5,
+              backdropFilter: "blur(18px)",
+            }}
+          >
+
+            <h3
+              style={{
+                color: "#C8A96B",
+                fontSize: isMobile ? "28px" : "36px",
+                marginBottom: "8px",
+              }}
+            >
+              ₹4000Cr+
+            </h3>
+
+            <p
+              style={{
+                color: "#9F9F9F",
+                margin: 0,
+                fontSize: isMobile ? "12px" : "15px",
+              }}
+            >
+              GMV Managed
+            </p>
+
+          </div>
+
+          {/* FLOATING CARD 2 */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: isMobile ? "-20px" : "40px",
+              right: isMobile ? "-10px" : "-40px",
+              background:
+                "rgba(15,15,15,0.88)",
+              border:
+                "1px solid rgba(200,169,107,0.2)",
+              padding: isMobile
+                ? "16px 18px"
+                : "24px 28px",
+              borderRadius: "22px",
+              boxShadow:
+                "0 20px 60px rgba(0,0,0,0.4)",
+              zIndex: 5,
+              backdropFilter: "blur(18px)",
+            }}
+          >
+
+            <h3
+              style={{
+                color: "#C8A96B",
+                fontSize: isMobile ? "28px" : "36px",
+                marginBottom: "8px",
+              }}
+            >
+              120+
+            </h3>
+
+            <p
+              style={{
+                color: "#9F9F9F",
+                margin: 0,
+                fontSize: isMobile ? "12px" : "15px",
+              }}
+            >
+              Properties Onboarded
+            </p>
 
           </div>
 
