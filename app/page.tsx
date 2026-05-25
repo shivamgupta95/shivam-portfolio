@@ -11,9 +11,6 @@ import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Whatsapp from "../components/Whatsapp";
-import Loader from "../components/Loader";
-import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
 import SocialBar from "../components/SocialBar";
 
@@ -32,10 +29,6 @@ export default function Home() {
     >
 
       <Particles />
-
-      <Loader />
-
-      <Cursor />
 
       <SocialBar />
 
@@ -80,8 +73,6 @@ export default function Home() {
       </section>
 
       <Footer />
-
-      <Whatsapp />
 
     </main>
 
