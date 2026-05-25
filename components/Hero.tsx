@@ -1,96 +1,99 @@
+"use client";
+
 export default function Hero() {
   return (
     <section
       style={{
         minHeight: "100vh",
+        background:
+          "radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 30%), radial-gradient(circle at bottom right, rgba(168,85,247,0.2), transparent 30%), #050816",
         display: "flex",
         alignItems: "center",
-        padding: "120px 24px",
+        justifyContent: "center",
+        padding: "120px 20px 80px",
         position: "relative",
-        overflow: "hidden"
+        overflow: "hidden",
       }}
     >
-
-      {/* LEFT BLUE GLOW */}
+      {/* BLUR EFFECT */}
       <div
         style={{
           position: "absolute",
-          top: "-200px",
+          width: "500px",
+          height: "500px",
+          background: "rgba(59,130,246,0.15)",
+          filter: "blur(120px)",
+          top: "-150px",
           left: "-150px",
-          width: "500px",
-          height: "500px",
-          background: "rgba(59,130,246,0.18)",
-          filter: "blur(120px)",
-          borderRadius: "50%"
+          borderRadius: "50%",
         }}
       />
 
-      {/* RIGHT PURPLE GLOW */}
       <div
         style={{
           position: "absolute",
-          bottom: "-200px",
-          right: "-150px",
           width: "500px",
           height: "500px",
-          background: "rgba(168,85,247,0.18)",
+          background: "rgba(168,85,247,0.15)",
           filter: "blur(120px)",
-          borderRadius: "50%"
+          bottom: "-150px",
+          right: "-150px",
+          borderRadius: "50%",
         }}
       />
 
       <div
         style={{
-          maxWidth: "1400px",
+          maxWidth: "1200px",
           width: "100%",
-          margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-          gap: "80px",
+          gap: "60px",
           alignItems: "center",
-          position: "relative",
-          zIndex: 2
+          zIndex: 2,
         }}
       >
-
         {/* LEFT SIDE */}
         <div>
-
           <p
             style={{
               color: "#60A5FA",
               textTransform: "uppercase",
-              letterSpacing: "5px",
+              letterSpacing: "4px",
+              marginBottom: "20px",
               fontSize: "14px",
-              marginBottom: "24px"
+              fontWeight: "600",
             }}
           >
-            Business Growth Leader
+            Business Head • Real Estate Strategist
           </p>
 
           <h1
             style={{
-              fontSize: "clamp(56px, 8vw, 96px)",
+              fontSize: "clamp(48px, 8vw, 90px)",
               lineHeight: "1",
-              fontWeight: "bold",
-              marginBottom: "32px"
+              marginBottom: "24px",
+              fontWeight: "800",
             }}
           >
-            Shivam <br /> Gupta
+            Shivam
+            <br />
+            Gupta
           </h1>
 
           <p
             style={{
-              fontSize: "clamp(18px,2vw,24px)",
-              color: "#d1d5db",
-              lineHeight: "1.8",
+              color: "#9CA3AF",
+              fontSize: "18px",
+              lineHeight: "1.9",
               marginBottom: "40px",
-              maxWidth: "700px"
+              maxWidth: "600px",
             }}
           >
-            I scale businesses, acquisitions, operations, and strategic growth
-            across Mumbai’s real estate ecosystem — combining operational excellence,
-            leadership, and expansion-driven execution.
+            Business leader specializing in real estate operations,
+            acquisitions, luxury transactions, expansion strategy,
+            and execution-driven growth across Mumbai’s evolving
+            real estate ecosystem.
           </p>
 
           {/* BUTTONS */}
@@ -98,110 +101,101 @@ export default function Hero() {
             style={{
               display: "flex",
               gap: "20px",
-              flexWrap: "wrap"
+              flexWrap: "wrap",
             }}
           >
-
-            {/* LINKEDIN BUTTON */}
             <a
-              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+              href="/resume.pdf"
               target="_blank"
               style={{
                 background: "#2563EB",
-                padding: "18px 32px",
-                borderRadius: "18px",
+                padding: "16px 28px",
+                borderRadius: "14px",
                 color: "white",
                 textDecoration: "none",
-                fontWeight: "bold",
-                boxShadow: "0 0 30px rgba(37,99,235,0.35)"
-              }}
-            >
-              LinkedIn Profile
-            </a>
-
-            {/* DOWNLOAD RESUME BUTTON */}
-            <a
-              href="/resume.pdf"
-              download
-              style={{
-                padding: "18px 32px",
-                borderRadius: "18px",
-                border: "1px solid rgba(255,255,255,0.15)",
-                background: "rgba(255,255,255,0.03)",
-                color: "white",
-                textDecoration: "none",
-                fontWeight: "bold"
+                fontWeight: "600",
+                boxShadow: "0 0 25px rgba(37,99,235,0.4)",
               }}
             >
               Download Resume
             </a>
 
+            <a
+              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+              target="_blank"
+              style={{
+                border: "1px solid rgba(255,255,255,0.15)",
+                padding: "16px 28px",
+                borderRadius: "14px",
+                color: "white",
+                textDecoration: "none",
+                fontWeight: "600",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              LinkedIn Profile
+            </a>
           </div>
-
         </div>
 
         {/* RIGHT SIDE */}
         <div
           style={{
             display: "grid",
-            gap: "24px"
+            gridTemplateColumns: "repeat(2,1fr)",
+            gap: "20px",
           }}
         >
-
           {[
             {
-              value: "₹4,000Cr+",
-              label: "GMV Managed"
+              number: "₹4000Cr+",
+              label: "GMV Managed",
             },
             {
-              value: "₹200Cr+",
-              label: "Luxury Transactions"
+              number: "120+",
+              label: "Properties Onboarded",
             },
             {
-              value: "25+",
-              label: "Teams Led"
+              number: "25+",
+              label: "Teams Led",
             },
             {
-              value: "97%",
-              label: "Customer Satisfaction"
-            }
+              number: "95%+",
+              label: "Occupancy Optimization",
+            },
           ].map((item, index) => (
             <div
               key={index}
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "28px",
-                padding: "36px",
-                backdropFilter: "blur(20px)"
+                borderRadius: "24px",
+                padding: "30px",
+                backdropFilter: "blur(12px)",
               }}
             >
-
-              <h3
+              <h2
                 style={{
-                  fontSize: "42px",
-                  marginBottom: "12px"
+                  fontSize: "32px",
+                  marginBottom: "12px",
+                  color: "white",
                 }}
               >
-                {item.value}
-              </h3>
+                {item.number}
+              </h2>
 
               <p
                 style={{
                   color: "#9CA3AF",
-                  fontSize: "16px"
+                  lineHeight: "1.6",
                 }}
               >
                 {item.label}
               </p>
-
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
