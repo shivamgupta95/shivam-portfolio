@@ -1,100 +1,94 @@
 "use client";
 
+const links = [
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Experience",
+    href: "#timeline",
+  },
+  {
+    name: "Leadership",
+    href: "#leadership",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
+
 export default function Navbar() {
 
   return (
 
-    <div
+    <header
       style={{
         position: "fixed",
         top: "20px",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "92%",
-        maxWidth: "1400px",
-        zIndex: 999,
+        width: "calc(100% - 40px)",
+        maxWidth: "1200px",
+        zIndex: 1000,
       }}
     >
 
       <div
         style={{
+          background: "rgba(255,255,255,0.05)",
+          border: "1px solid rgba(255,255,255,0.08)",
+          backdropFilter: "blur(18px)",
+          borderRadius: "24px",
+          padding: "18px 30px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "18px 30px",
-          borderRadius: "22px",
-          background: "rgba(10,15,30,0.65)",
-          backdropFilter: "blur(18px)",
-          border: "1px solid rgba(255,255,255,0.08)",
-          boxShadow: "0 0 40px rgba(0,0,0,0.35)",
         }}
       >
 
-        {/* LEFT SIDE */}
+        {/* LOGO */}
         <h2
           style={{
             color: "white",
-            fontSize: "34px",
-            fontWeight: "800",
             margin: 0,
+            fontSize: "22px",
           }}
         >
           Shivam Gupta
         </h2>
 
-        {/* RIGHT SIDE */}
-        <div
+        {/* LINKS */}
+        <nav
           style={{
             display: "flex",
-            gap: "34px",
-            alignItems: "center",
+            gap: "28px",
             flexWrap: "wrap",
           }}
         >
 
-          <a href="#about" style={linkStyle}>
-            About
-          </a>
+          {links.map((item, index) => (
 
-          <a href="#experience" style={linkStyle}>
-            Experience
-          </a>
+            <a
+              key={index}
+              href={item.href}
+              style={{
+                color: "#D1D5DB",
+                textDecoration: "none",
+                fontSize: "16px",
+                fontWeight: "600",
+              }}
+            >
+              {item.name}
+            </a>
 
-          <a href="#leadership" style={linkStyle}>
-            Leadership
-          </a>
+          ))}
 
-          <a href="#contact" style={linkStyle}>
-            Contact
-          </a>
-
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            style={{
-              background: "#2563EB",
-              color: "white",
-              padding: "14px 26px",
-              borderRadius: "14px",
-              textDecoration: "none",
-              fontWeight: "700",
-            }}
-          >
-            Resume
-          </a>
-
-        </div>
+        </nav>
 
       </div>
 
-    </div>
-
+    </header>
   );
 }
-
-const linkStyle = {
-  color: "white",
-  textDecoration: "none",
-  fontWeight: "600",
-  fontSize: "17px",
-};

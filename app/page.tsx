@@ -38,36 +38,45 @@ export default function Home() {
 
       <Hero />
 
+      {/* ABOUT */}
       <section id="about">
         <About />
       </section>
 
+      {/* STATS */}
       <section id="stats">
         <Stats />
       </section>
 
+      {/* EXPERTISE */}
       <section id="expertise">
         <Expertise />
       </section>
 
+      {/* ACHIEVEMENTS */}
       <section id="achievements">
         <Achievements />
       </section>
 
+      {/* EXPERIENCE */}
       <section id="timeline">
         <Timeline />
       </section>
 
+      {/* LEADERSHIP */}
       <section id="leadership">
         <Leadership />
       </section>
 
+      {/* TESTIMONIALS */}
       <section id="testimonials">
         <Testimonials />
       </section>
 
+      {/* CTA */}
       <CTA />
 
+      {/* CONTACT */}
       <section id="contact">
         <Contact />
       </section>
