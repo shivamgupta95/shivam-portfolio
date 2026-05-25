@@ -30,26 +30,15 @@ export default function Home() {
 
   useEffect(() => {
 
-    const handleScroll = () => {
+    const interval = setInterval(() => {
 
-      const scrollY = window.scrollY;
+      setCurrentBg((prev) =>
+        prev === backgrounds.length - 1 ? 0 : prev + 1
+      );
 
-      if (scrollY < 700) {
-        setCurrentBg(0);
-      } else if (scrollY < 1600) {
-        setCurrentBg(1);
-      } else if (scrollY < 2600) {
-        setCurrentBg(2);
-      } else {
-        setCurrentBg(3);
-      }
+    }, 5000);
 
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => clearInterval(interval);
 
   }, []);
 
@@ -64,7 +53,7 @@ export default function Home() {
       }}
     >
 
-      {/* FULL PAGE BACKGROUND */}
+      {/* CINEMATIC BACKGROUND */}
       <div
         style={{
           position: "fixed",
@@ -73,18 +62,19 @@ export default function Home() {
             `url(${backgrounds[currentBg]})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          transition: "all 1s ease",
+          transition: "background-image 1.2s ease-in-out",
           zIndex: -5,
+          transform: "scale(1.03)",
         }}
       />
 
-      {/* DARK OVERLAY */}
+      {/* DARK LUXURY OVERLAY */}
       <div
         style={{
           position: "fixed",
           inset: 0,
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.78), rgba(0,0,0,0.88))",
+            "linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.88))",
           zIndex: -4,
         }}
       />
