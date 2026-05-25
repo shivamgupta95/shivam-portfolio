@@ -1,28 +1,64 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Navbar() {
 
+  const [active, setActive] = useState("about");
+
   const navLinks = [
+
     {
       name: "About",
-      href: "#about",
+      href: "about",
     },
 
     {
       name: "Experience",
-      href: "#timeline",
+      href: "timeline",
     },
 
     {
       name: "Leadership",
-      href: "#leadership",
+      href: "leadership",
     },
 
     {
       name: "Contact",
-      href: "#contact",
+      href: "contact",
     },
+
   ];
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      const sections = navLinks.map((item) =>
+        document.getElementById(item.href)
+      );
+
+      sections.forEach((section) => {
+
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          setActive(section.id);
+        }
+
+      });
+
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
 
   return (
 
@@ -67,7 +103,7 @@ export default function Navbar() {
         <div
           style={{
             display: "flex",
-            gap: "24px",
+            gap: "22px",
             alignItems: "center",
             flexWrap: "wrap",
             justifyContent: "center",
@@ -78,22 +114,41 @@ export default function Navbar() {
 
             <a
               key={index}
-              href={item.href}
+              href={`#${item.href}`}
 
               style={{
-                color: "#D1D5DB",
+                color:
+                  active === item.href
+                    ? "#60A5FA"
+                    : "#D1D5DB",
+
                 textDecoration: "none",
+
                 fontSize: "16px",
-                fontWeight: "500",
+
+                fontWeight:
+                  active === item.href
+                    ? "700"
+                    : "500",
+
                 transition: "0.3s",
-              }}
 
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#60A5FA";
-              }}
+                padding:
+                  active === item.href
+                    ? "10px 16px"
+                    : "0px",
 
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "#D1D5DB";
+                borderRadius: "12px",
+
+                background:
+                  active === item.href
+                    ? "rgba(96,165,250,0.12)"
+                    : "transparent",
+
+                boxShadow:
+                  active === item.href
+                    ? "0 0 25px rgba(37,99,235,0.18)"
+                    : "none",
               }}
             >
               {item.name}
@@ -110,10 +165,10 @@ export default function Navbar() {
               background: "#2563EB",
               color: "white",
               textDecoration: "none",
-              padding: "12px 20px",
-              borderRadius: "12px",
+              padding: "12px 22px",
+              borderRadius: "14px",
               fontWeight: "600",
-              boxShadow: "0 0 20px rgba(37,99,235,0.4)",
+              boxShadow: "0 0 25px rgba(37,99,235,0.3)",
             }}
           >
             Resume
