@@ -26,44 +26,44 @@ export default function Navbar() {
     <header
       style={{
         position: "fixed",
-        top: "20px",
+        top: "24px",
         left: "50%",
         transform: "translateX(-50%)",
-        width: "calc(100% - 40px)",
-        maxWidth: "1200px",
+        width: "calc(100% - 48px)",
+        maxWidth: "1320px",
         zIndex: 1000,
       }}
     >
 
       <div
         style={{
-          background: "rgba(255,255,255,0.05)",
-          border: "1px solid rgba(255,255,255,0.08)",
-          backdropFilter: "blur(18px)",
-          borderRadius: "24px",
-          padding: "18px 30px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          padding: "20px 28px",
+          background: "rgba(5,8,22,0.75)",
+          backdropFilter: "blur(16px)",
+          borderRadius: "18px",
+          border: "1px solid rgba(255,255,255,0.06)",
         }}
       >
 
-        {/* LOGO */}
         <h2
           style={{
             color: "white",
+            fontSize: "20px",
             margin: 0,
-            fontSize: "22px",
+            fontWeight: "700",
+            letterSpacing: "-0.5px",
           }}
         >
           Shivam Gupta
         </h2>
 
-        {/* LINKS */}
         <nav
           style={{
             display: "flex",
-            gap: "28px",
+            gap: "30px",
             flexWrap: "wrap",
           }}
         >
@@ -76,7 +76,7 @@ export default function Navbar() {
               style={{
                 color: "#D1D5DB",
                 textDecoration: "none",
-                fontSize: "16px",
+                fontSize: "15px",
                 fontWeight: "600",
               }}
             >
@@ -90,5 +90,6 @@ export default function Navbar() {
       </div>
 
     </header>
+
   );
 }

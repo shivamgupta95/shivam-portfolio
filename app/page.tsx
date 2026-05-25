@@ -11,8 +11,6 @@ import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import Particles from "../components/Particles";
-import SocialBar from "../components/SocialBar";
 
 export default function Home() {
 
@@ -23,14 +21,8 @@ export default function Home() {
         background: "#050816",
         color: "white",
         minHeight: "100vh",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
-
-      <Particles />
-
-      <SocialBar />
 
       <Topbar />
 
@@ -38,45 +30,36 @@ export default function Home() {
 
       <Hero />
 
-      {/* ABOUT */}
       <section id="about">
         <About />
       </section>
 
-      {/* STATS */}
       <section id="stats">
         <Stats />
       </section>
 
-      {/* EXPERTISE */}
       <section id="expertise">
         <Expertise />
       </section>
 
-      {/* ACHIEVEMENTS */}
       <section id="achievements">
         <Achievements />
       </section>
 
-      {/* EXPERIENCE */}
       <section id="timeline">
         <Timeline />
       </section>
 
-      {/* LEADERSHIP */}
       <section id="leadership">
         <Leadership />
       </section>
 
-      {/* TESTIMONIALS */}
       <section id="testimonials">
         <Testimonials />
       </section>
 
-      {/* CTA */}
       <CTA />
 
-      {/* CONTACT */}
       <section id="contact">
         <Contact />
       </section>
