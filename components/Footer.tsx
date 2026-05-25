@@ -59,7 +59,7 @@ export default function Footer() {
         >
 
           <a
-            href="mailto:guptashivam251095@gmail.com"
+            href="mailto:officialshivamgupta25@gmail.com"
             style={linkStyle}
           >
             Email

@@ -32,7 +32,7 @@ export default function SocialBar() {
 
       {/* EMAIL */}
       <a
-        href="mailto:shivamgupta109525@gmail.com"
+        href="mailto:officialshivamgupta25@gmail.com"
         style={socialStyle(isMobile)}
       >
         @

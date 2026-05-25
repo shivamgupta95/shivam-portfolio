@@ -76,7 +76,7 @@ export default function Contact() {
 
           {/* EMAIL */}
           <a
-            href="mailto:shivamgupta109525@gmail.com"
+            href="mailto:officialshivamgupta25@gmail.com"
             style={{
               background: "#C8A96B",
               color: "#050505",
@@ -120,7 +120,7 @@ export default function Contact() {
             fontSize: "16px",
           }}
         >
-          shivamgupta109525@gmail.com
+          officialshivamgupta25@gmail.com
         </p>
 
       </div>

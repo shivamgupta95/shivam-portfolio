@@ -100,7 +100,7 @@ export default function CTA() {
           >
 
             <a
-              href="mailto:guptashivam251095@gmail.com"
+              href="mailto:officialshivamgupta25@gmail.com"
               style={{
                 background: "#2563EB",
                 padding: "20px 34px",
