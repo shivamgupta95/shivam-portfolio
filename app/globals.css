@@ -15,18 +15,15 @@ body {
   overflow-x: hidden;
 }
 
-/* LINKS */
 a {
   color: inherit;
 }
 
-/* SECTION DEPTH */
 section {
   position: relative;
   animation: fadeUp 1s ease;
 }
 
-/* PREMIUM DIVIDER */
 section::after {
 
   content: "";
@@ -51,7 +48,6 @@ section::after {
 
 }
 
-/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -65,7 +61,6 @@ section::after {
   border-radius: 20px;
 }
 
-/* FADE */
 @keyframes fadeUp {
 
   from {
@@ -80,7 +75,6 @@ section::after {
 
 }
 
-/* FLOAT */
 @keyframes floating {
 
   0% {
@@ -97,7 +91,6 @@ section::after {
 
 }
 
-/* GLOW */
 @keyframes glowPulse {
 
   0% {
@@ -114,7 +107,19 @@ section::after {
 
 }
 
-/* PREMIUM CARD FEEL */
 div {
   transition: all 0.35s ease;
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 900px) {
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-button {
+    display: block !important;
+  }
+
 }

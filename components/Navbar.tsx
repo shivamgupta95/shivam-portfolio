@@ -6,6 +6,8 @@ export default function Navbar() {
 
   const [active, setActive] = useState("about");
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navLinks = [
 
     {
@@ -68,7 +70,7 @@ export default function Navbar() {
         top: 0,
         width: "100%",
         zIndex: 1000,
-        background: "rgba(5,8,22,0.7)",
+        background: "rgba(5,8,22,0.75)",
         backdropFilter: "blur(14px)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}
@@ -82,8 +84,6 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          gap: "20px",
-          flexWrap: "wrap",
         }}
       >
 
@@ -94,19 +94,19 @@ export default function Navbar() {
             fontWeight: "700",
             color: "white",
             letterSpacing: "1px",
+            margin: 0,
           }}
         >
           Shivam Gupta
         </h2>
 
-        {/* LINKS */}
+        {/* DESKTOP NAV */}
         <div
+          className="desktop-nav"
           style={{
             display: "flex",
             gap: "22px",
             alignItems: "center",
-            flexWrap: "wrap",
-            justifyContent: "center",
           }}
         >
 
@@ -156,7 +156,6 @@ export default function Navbar() {
 
           ))}
 
-          {/* RESUME BUTTON */}
           <a
             href="/resume.pdf"
             target="_blank"
@@ -176,7 +175,80 @@ export default function Navbar() {
 
         </div>
 
+        {/* MOBILE MENU BUTTON */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "white",
+            fontSize: "28px",
+            cursor: "pointer",
+            display: "none",
+          }}
+
+          className="mobile-button"
+        >
+          ☰
+        </button>
+
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+
+        <div
+          style={{
+            padding: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            background: "rgba(5,8,22,0.95)",
+            borderTop: "1px solid rgba(255,255,255,0.08)",
+          }}
+        >
+
+          {navLinks.map((item, index) => (
+
+            <a
+              key={index}
+              href={`#${item.href}`}
+
+              onClick={() => setMenuOpen(false)}
+
+              style={{
+                color: "white",
+                textDecoration: "none",
+                fontSize: "18px",
+                fontWeight: "600",
+              }}
+            >
+              {item.name}
+            </a>
+
+          ))}
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+
+            style={{
+              background: "#2563EB",
+              color: "white",
+              textDecoration: "none",
+              padding: "14px 20px",
+              borderRadius: "14px",
+              fontWeight: "600",
+              width: "fit-content",
+            }}
+          >
+            Resume
+          </a>
+
+        </div>
+
+      )}
 
     </nav>
 
