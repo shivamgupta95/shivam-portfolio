@@ -8,6 +8,7 @@ import Achievements from "../components/Achievements";
 import Timeline from "../components/Timeline";
 import Leadership from "../components/Leadership";
 import Testimonials from "../components/Testimonials";
+import CTA from "../components/CTA";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
@@ -72,6 +73,8 @@ export default function Home() {
         <Testimonials />
       </section>
 
+      <CTA />
+
       <section id="contact">
         <Contact />
       </section>
@@ -81,5 +84,6 @@ export default function Home() {
       <Whatsapp />
 
     </main>
+
   );
 }
