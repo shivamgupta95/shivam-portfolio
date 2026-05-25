@@ -7,22 +7,37 @@ const experiences = [
     company: "Jugyah Real Estate Services Pvt. Ltd.",
     duration: "2024 – Present",
     points: [
-      "Leading acquisitions, operations, and strategic expansion initiatives across Mumbai.",
-      "Managed ₹4000Cr+ GMV and scaled operational efficiency across premium residential assets.",
-      "Led cross-functional teams driving occupancy optimization and revenue growth.",
-      "Handled luxury real estate growth, execution strategy, and business scaling."
+      "Leading acquisitions, strategic expansion, and operational growth initiatives across Mumbai Metropolitan Region.",
+      "Managed ₹4000Cr+ GMV across premium residential and luxury real estate portfolios.",
+      "Led cross-functional teams handling operations, occupancy optimization, and business scaling.",
+      "Handled execution-focused growth strategy, acquisitions, and revenue optimization.",
+      "Drove operational efficiency and streamlined execution processes across multiple verticals."
     ]
   },
 
   {
     role: "Business Development & Operations",
-    company: "Real Estate & Strategic Growth",
+    company: "Real Estate Growth & Expansion",
     duration: "2022 – 2024",
     points: [
-      "Worked on high-value property acquisitions and operational growth initiatives.",
-      "Handled client relationships, strategic planning, and execution-focused operations.",
-      "Supported expansion initiatives across premium real estate verticals.",
-      "Improved occupancy, onboarding, and operational efficiency."
+      "Worked on high-value property acquisitions and premium residential growth initiatives.",
+      "Managed client relationships, strategic partnerships, and operational coordination.",
+      "Improved occupancy optimization, onboarding efficiency, and execution-driven operations.",
+      "Supported expansion initiatives across luxury and managed residential assets.",
+      "Collaborated with teams on scaling operational processes and improving business performance."
+    ]
+  },
+
+  {
+    role: "Sales & Client Relations",
+    company: "Real Estate & Business Operations",
+    duration: "2020 – 2022",
+    points: [
+      "Handled client relationship management and business development activities.",
+      "Worked closely with clients on property consultations and strategic decision-making.",
+      "Supported operational coordination and customer experience improvement initiatives.",
+      "Contributed to business growth through execution-focused sales and client servicing.",
+      "Built strong communication and relationship management capabilities."
     ]
   }
 
