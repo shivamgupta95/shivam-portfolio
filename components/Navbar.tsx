@@ -67,11 +67,17 @@ export default function Navbar() {
     <nav
       style={{
         position: "fixed",
-        top: 0,
+
+        top: "42px",
+
         width: "100%",
+
         zIndex: 1000,
+
         background: "rgba(5,8,22,0.75)",
+
         backdropFilter: "blur(14px)",
+
         borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}
     >
@@ -79,10 +85,15 @@ export default function Navbar() {
       <div
         style={{
           maxWidth: "1300px",
+
           margin: "0 auto",
+
           padding: "18px 20px",
+
           display: "flex",
+
           justifyContent: "space-between",
+
           alignItems: "center",
         }}
       >
@@ -91,9 +102,13 @@ export default function Navbar() {
         <h2
           style={{
             fontSize: "24px",
+
             fontWeight: "700",
+
             color: "white",
+
             letterSpacing: "1px",
+
             margin: 0,
           }}
         >
@@ -105,7 +120,9 @@ export default function Navbar() {
           className="desktop-nav"
           style={{
             display: "flex",
+
             gap: "22px",
+
             alignItems: "center",
           }}
         >
@@ -114,6 +131,7 @@ export default function Navbar() {
 
             <a
               key={index}
+
               href={`#${item.href}`}
 
               style={{
@@ -158,15 +176,22 @@ export default function Navbar() {
 
           <a
             href="/resume.pdf"
+
             target="_blank"
 
             style={{
               background: "#2563EB",
+
               color: "white",
+
               textDecoration: "none",
+
               padding: "12px 22px",
+
               borderRadius: "14px",
+
               fontWeight: "600",
+
               boxShadow: "0 0 25px rgba(37,99,235,0.3)",
             }}
           >
@@ -181,10 +206,15 @@ export default function Navbar() {
 
           style={{
             background: "transparent",
+
             border: "none",
+
             color: "white",
+
             fontSize: "28px",
+
             cursor: "pointer",
+
             display: "none",
           }}
 
@@ -201,10 +231,15 @@ export default function Navbar() {
         <div
           style={{
             padding: "20px",
+
             display: "flex",
+
             flexDirection: "column",
+
             gap: "20px",
+
             background: "rgba(5,8,22,0.95)",
+
             borderTop: "1px solid rgba(255,255,255,0.08)",
           }}
         >
@@ -213,14 +248,18 @@ export default function Navbar() {
 
             <a
               key={index}
+
               href={`#${item.href}`}
 
               onClick={() => setMenuOpen(false)}
 
               style={{
                 color: "white",
+
                 textDecoration: "none",
+
                 fontSize: "18px",
+
                 fontWeight: "600",
               }}
             >
@@ -231,15 +270,22 @@ export default function Navbar() {
 
           <a
             href="/resume.pdf"
+
             target="_blank"
 
             style={{
               background: "#2563EB",
+
               color: "white",
+
               textDecoration: "none",
+
               padding: "14px 20px",
+
               borderRadius: "14px",
+
               fontWeight: "600",
+
               width: "fit-content",
             }}
           >
