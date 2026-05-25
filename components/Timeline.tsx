@@ -3,41 +3,88 @@
 const experiences = [
 
   {
-    role: "Business Head",
+    role: "Business Head / Head of Business",
     company: "Jugyah Real Estate Services Pvt. Ltd.",
-    duration: "2024 – Present",
+    duration: "Nov 2024 – Present",
     points: [
-      "Leading acquisitions, strategic expansion, and operational growth initiatives across Mumbai Metropolitan Region.",
-      "Managed ₹4000Cr+ GMV across premium residential and luxury real estate portfolios.",
-      "Led cross-functional teams handling operations, occupancy optimization, and business scaling.",
-      "Handled execution-focused growth strategy, acquisitions, and revenue optimization.",
-      "Drove operational efficiency and streamlined execution processes across multiple verticals."
+      "Leading end-to-end real estate operations across Mumbai Metropolitan Region including acquisitions, sales, strategic expansion, and revenue growth.",
+      "Managing a ₹4000+ Crore GMV portfolio across premium residential and luxury real estate assets.",
+      "Leading and mentoring a 25+ member sales and operations team across multiple business verticals.",
+      "Negotiated ultra-luxury transactions exceeding ₹200 Crore for HNI clients across Bandra and South Mumbai.",
+      "Expanded business operations into Navi Mumbai and Thane markets.",
+      "Implemented data-driven growth strategies improving funnel conversion and operational scalability."
     ]
   },
 
   {
-    role: "Business Development & Operations",
-    company: "Real Estate Growth & Expansion",
-    duration: "2022 – 2024",
+    role: "Zonal Manager",
+    company: "Jugyah Real Estate Services Pvt. Ltd.",
+    duration: "Apr 2024 – Nov 2024",
     points: [
-      "Worked on high-value property acquisitions and premium residential growth initiatives.",
-      "Managed client relationships, strategic partnerships, and operational coordination.",
-      "Improved occupancy optimization, onboarding efficiency, and execution-driven operations.",
-      "Supported expansion initiatives across luxury and managed residential assets.",
-      "Collaborated with teams on scaling operational processes and improving business performance."
+      "Led Mumbai West operations driving ₹1.44 Crore revenue generation.",
+      "Managed a 10-member sales team handling acquisitions, negotiations, and client relationships.",
+      "Designed sales training systems and operational frameworks improving conversion rates significantly.",
+      "Handled strategic deal closures and operational execution across high-value residential assets."
     ]
   },
 
   {
-    role: "Sales & Client Relations",
-    company: "Real Estate & Business Operations",
-    duration: "2020 – 2022",
+    role: "Acquisition Manager – STR Division",
+    company: "Jugyah Real Estate Services Pvt. Ltd.",
+    duration: "Jan 2024 – Apr 2024",
     points: [
-      "Handled client relationship management and business development activities.",
-      "Worked closely with clients on property consultations and strategic decision-making.",
-      "Supported operational coordination and customer experience improvement initiatives.",
-      "Contributed to business growth through execution-focused sales and client servicing.",
-      "Built strong communication and relationship management capabilities."
+      "Headed the STR business vertical onboarding 50+ premium properties across MMR.",
+      "Maintained occupancy above 80% while achieving 2x rental yield compared to long-term rentals.",
+      "Managed sourcing, interiors, pricing strategy, listing optimization, and hospitality platforms.",
+      "Achieved 50% profitability making the business line cash-flow positive."
+    ]
+  },
+
+  {
+    role: "Senior Sales Associate",
+    company: "Jugyah Real Estate Services Pvt. Ltd.",
+    duration: "Jun 2023 – Jan 2024",
+    points: [
+      "Onboarded 200+ properties with complete due diligence and documentation compliance.",
+      "Reduced onboarding turnaround time by 93%, contributing to rapid business growth.",
+      "Managed ₹800 Crore GMV while optimizing pricing strategies for sales and rental portfolios.",
+      "Collaborated with technology teams to improve CRM systems and fake listing detection."
+    ]
+  },
+
+  {
+    role: "House Acquisition Manager",
+    company: "Nestaway Technologies Pvt. Ltd.",
+    duration: "Nov 2022 – Jun 2023",
+    points: [
+      "Onboarded 120+ residential homes while improving booking turnaround efficiency.",
+      "Worked closely with leadership teams on operational strategy and due diligence initiatives.",
+      "Recognized as Employee of the Month for 6 consecutive months.",
+      "Contributed to operational optimization and strategic growth initiatives."
+    ]
+  },
+
+  {
+    role: "Business Development Manager",
+    company: "Trumac Infra Pvt. Ltd.",
+    duration: "Mar 2022 – Nov 2022",
+    points: [
+      "Managed the complete sales cycle contributing to 30% business revenue growth.",
+      "Secured Indian Railways as a major client with an order value of approximately ₹1000 Crore.",
+      "Developed multi-channel sales and marketing initiatives improving business acquisition.",
+      "Built strategic client relationships and managed high-value negotiations."
+    ]
+  },
+
+  {
+    role: "Retail Sales Manager",
+    company: "SRC, Mumbai",
+    duration: "Jun 2016 – Mar 2022",
+    points: [
+      "Managed sales operations, customer service, inventory handling, and staff training.",
+      "Led frontline sales execution and customer relationship management initiatives.",
+      "Implemented operational improvements reducing turnaround time by 80%.",
+      "Built strong foundations in leadership, sales operations, and execution-focused management."
     ]
   }
 
