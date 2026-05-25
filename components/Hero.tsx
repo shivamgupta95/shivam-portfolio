@@ -184,6 +184,84 @@ export default function Hero() {
 
           </div>
 
+          {/* FLOATING CARD 1 */}
+          <div
+            style={{
+              position: "absolute",
+              top: "40px",
+              left: "-60px",
+              background: "rgba(255,255,255,0.06)",
+              border:
+                "1px solid rgba(255,255,255,0.08)",
+              backdropFilter: "blur(18px)",
+              padding: "22px 26px",
+              borderRadius: "24px",
+              boxShadow:
+                "0 0 30px rgba(0,0,0,0.25)",
+              zIndex: 5,
+            }}
+          >
+
+            <h3
+              style={{
+                fontSize: "32px",
+                marginBottom: "8px",
+                color: "white",
+              }}
+            >
+              ₹4000Cr+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                margin: 0,
+              }}
+            >
+              GMV Managed
+            </p>
+
+          </div>
+
+          {/* FLOATING CARD 2 */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "60px",
+              right: "-50px",
+              background: "rgba(255,255,255,0.06)",
+              border:
+                "1px solid rgba(255,255,255,0.08)",
+              backdropFilter: "blur(18px)",
+              padding: "22px 26px",
+              borderRadius: "24px",
+              boxShadow:
+                "0 0 30px rgba(0,0,0,0.25)",
+              zIndex: 5,
+            }}
+          >
+
+            <h3
+              style={{
+                fontSize: "32px",
+                marginBottom: "8px",
+                color: "white",
+              }}
+            >
+              120+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                margin: 0,
+              }}
+            >
+              Properties Onboarded
+            </p>
+
+          </div>
+
         </div>
 
       </div>
