@@ -1,302 +1,100 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 export default function Navbar() {
-
-  const [active, setActive] = useState("about");
-
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const navLinks = [
-
-    {
-      name: "About",
-      href: "about",
-    },
-
-    {
-      name: "Experience",
-      href: "timeline",
-    },
-
-    {
-      name: "Leadership",
-      href: "leadership",
-    },
-
-    {
-      name: "Contact",
-      href: "contact",
-    },
-
-  ];
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-
-      const sections = navLinks.map((item) =>
-        document.getElementById(item.href)
-      );
-
-      sections.forEach((section) => {
-
-        if (!section) return;
-
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= 150 && rect.bottom >= 150) {
-          setActive(section.id);
-        }
-
-      });
-
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-
-  }, []);
 
   return (
 
-    <nav
+    <div
       style={{
         position: "fixed",
-
-        top: "42px",
-
-        width: "100%",
-
-        zIndex: 1000,
-
-        background: "rgba(5,8,22,0.75)",
-
-        backdropFilter: "blur(14px)",
-
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        top: "20px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "92%",
+        maxWidth: "1400px",
+        zIndex: 999,
       }}
     >
 
       <div
         style={{
-          maxWidth: "1300px",
-
-          margin: "0 auto",
-
-          padding: "18px 20px",
-
           display: "flex",
-
           justifyContent: "space-between",
-
           alignItems: "center",
+          padding: "18px 30px",
+          borderRadius: "22px",
+          background: "rgba(10,15,30,0.65)",
+          backdropFilter: "blur(18px)",
+          border: "1px solid rgba(255,255,255,0.08)",
+          boxShadow: "0 0 40px rgba(0,0,0,0.35)",
         }}
       >
 
-        {/* LOGO */}
+        {/* LEFT SIDE */}
         <h2
           style={{
-            fontSize: "24px",
-
-            fontWeight: "700",
-
             color: "white",
-
-            letterSpacing: "1px",
-
+            fontSize: "34px",
+            fontWeight: "800",
             margin: 0,
           }}
         >
           Shivam Gupta
         </h2>
 
-        {/* DESKTOP NAV */}
+        {/* RIGHT SIDE */}
         <div
-          className="desktop-nav"
           style={{
             display: "flex",
-
-            gap: "22px",
-
+            gap: "34px",
             alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
 
-          {navLinks.map((item, index) => (
+          <a href="#about" style={linkStyle}>
+            About
+          </a>
 
-            <a
-              key={index}
+          <a href="#experience" style={linkStyle}>
+            Experience
+          </a>
 
-              href={`#${item.href}`}
+          <a href="#leadership" style={linkStyle}>
+            Leadership
+          </a>
 
-              style={{
-                color:
-                  active === item.href
-                    ? "#60A5FA"
-                    : "#D1D5DB",
-
-                textDecoration: "none",
-
-                fontSize: "16px",
-
-                fontWeight:
-                  active === item.href
-                    ? "700"
-                    : "500",
-
-                transition: "0.3s",
-
-                padding:
-                  active === item.href
-                    ? "10px 16px"
-                    : "0px",
-
-                borderRadius: "12px",
-
-                background:
-                  active === item.href
-                    ? "rgba(96,165,250,0.12)"
-                    : "transparent",
-
-                boxShadow:
-                  active === item.href
-                    ? "0 0 25px rgba(37,99,235,0.18)"
-                    : "none",
-              }}
-            >
-              {item.name}
-            </a>
-
-          ))}
+          <a href="#contact" style={linkStyle}>
+            Contact
+          </a>
 
           <a
             href="/resume.pdf"
-
             target="_blank"
-
             style={{
               background: "#2563EB",
-
               color: "white",
-
-              textDecoration: "none",
-
-              padding: "12px 22px",
-
+              padding: "14px 26px",
               borderRadius: "14px",
-
-              fontWeight: "600",
-
-              boxShadow: "0 0 25px rgba(37,99,235,0.3)",
+              textDecoration: "none",
+              fontWeight: "700",
             }}
           >
             Resume
           </a>
 
         </div>
-
-        {/* MOBILE MENU BUTTON */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-
-          style={{
-            background: "transparent",
-
-            border: "none",
-
-            color: "white",
-
-            fontSize: "28px",
-
-            cursor: "pointer",
-
-            display: "none",
-          }}
-
-          className="mobile-button"
-        >
-          ☰
-        </button>
 
       </div>
 
-      {/* MOBILE MENU */}
-      {menuOpen && (
-
-        <div
-          style={{
-            padding: "20px",
-
-            display: "flex",
-
-            flexDirection: "column",
-
-            gap: "20px",
-
-            background: "rgba(5,8,22,0.95)",
-
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-          }}
-        >
-
-          {navLinks.map((item, index) => (
-
-            <a
-              key={index}
-
-              href={`#${item.href}`}
-
-              onClick={() => setMenuOpen(false)}
-
-              style={{
-                color: "white",
-
-                textDecoration: "none",
-
-                fontSize: "18px",
-
-                fontWeight: "600",
-              }}
-            >
-              {item.name}
-            </a>
-
-          ))}
-
-          <a
-            href="/resume.pdf"
-
-            target="_blank"
-
-            style={{
-              background: "#2563EB",
-
-              color: "white",
-
-              textDecoration: "none",
-
-              padding: "14px 20px",
-
-              borderRadius: "14px",
-
-              fontWeight: "600",
-
-              width: "fit-content",
-            }}
-          >
-            Resume
-          </a>
-
-        </div>
-
-      )}
-
-    </nav>
+    </div>
 
   );
 }
+
+const linkStyle = {
+  color: "white",
+  textDecoration: "none",
+  fontWeight: "600",
+  fontSize: "17px",
+};
