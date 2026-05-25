@@ -36,11 +36,7 @@ export default function Hero() {
       >
 
         {/* LEFT */}
-        <div
-          style={{
-            textAlign: "left",
-          }}
-        >
+        <div>
 
           <p
             style={{
@@ -84,7 +80,6 @@ export default function Hero() {
             business growth across Mumbai.
           </p>
 
-          {/* BUTTONS */}
           <div
             style={{
               display: "flex",
@@ -112,7 +107,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
               target="_blank"
               style={{
                 border:
@@ -143,20 +138,7 @@ export default function Hero() {
           }}
         >
 
-          {/* GLOW */}
-          <div
-            style={{
-              position: "absolute",
-              width: "500px",
-              height: "500px",
-              background:
-                "radial-gradient(circle, rgba(37,99,235,0.28), transparent 70%)",
-              filter: "blur(90px)",
-              zIndex: 1,
-            }}
-          />
-
-          {/* IMAGE CARD */}
+          {/* IMAGE */}
           <div
             style={{
               position: "relative",
@@ -186,6 +168,82 @@ export default function Hero() {
                 objectFit: "cover",
               }}
             />
+
+          </div>
+
+          {/* FLOATING CARD 1 */}
+          <div
+            style={{
+              position: "absolute",
+              top: "40px",
+              left: "-40px",
+              background: "rgba(255,255,255,0.06)",
+              border:
+                "1px solid rgba(255,255,255,0.08)",
+              backdropFilter: "blur(18px)",
+              padding: "18px 22px",
+              borderRadius: "22px",
+              zIndex: 5,
+            }}
+          >
+
+            <h3
+              style={{
+                color: "white",
+                margin: 0,
+                fontSize: "26px",
+              }}
+            >
+              ₹4000Cr+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                marginTop: "6px",
+                marginBottom: 0,
+              }}
+            >
+              GMV Managed
+            </p>
+
+          </div>
+
+          {/* FLOATING CARD 2 */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "40px",
+              right: "-40px",
+              background: "rgba(255,255,255,0.06)",
+              border:
+                "1px solid rgba(255,255,255,0.08)",
+              backdropFilter: "blur(18px)",
+              padding: "18px 22px",
+              borderRadius: "22px",
+              zIndex: 5,
+            }}
+          >
+
+            <h3
+              style={{
+                color: "white",
+                margin: 0,
+                fontSize: "26px",
+              }}
+            >
+              120+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                marginTop: "6px",
+                marginBottom: 0,
+              }}
+            >
+              Properties
+            </p>
 
           </div>
 
