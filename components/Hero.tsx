@@ -2,6 +2,10 @@
 
 export default function Hero() {
 
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.innerWidth < 768;
+
   return (
 
     <section
@@ -10,7 +14,9 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "140px 24px 100px",
+        padding: isMobile
+          ? "180px 20px 80px"
+          : "140px 24px 100px",
         position: "relative",
       }}
     >
@@ -21,22 +27,27 @@ export default function Hero() {
           maxWidth: "1450px",
           display: "grid",
           gridTemplateColumns:
-            "repeat(auto-fit,minmax(340px,1fr))",
-          gap: "100px",
+            isMobile ? "1fr" : "repeat(auto-fit,minmax(340px,1fr))",
+          gap: isMobile ? "70px" : "100px",
           alignItems: "center",
         }}
       >
 
         {/* LEFT */}
-        <div>
+        <div
+          style={{
+            order: isMobile ? 1 : 1,
+            textAlign: isMobile ? "center" : "left",
+          }}
+        >
 
           <p
             style={{
               color: "#C8A96B",
               textTransform: "uppercase",
-              letterSpacing: "5px",
-              fontSize: "13px",
-              marginBottom: "30px",
+              letterSpacing: "4px",
+              fontSize: isMobile ? "11px" : "13px",
+              marginBottom: "24px",
               fontWeight: "700",
             }}
           >
@@ -45,12 +56,14 @@ export default function Hero() {
 
           <h1
             style={{
-              fontSize: "clamp(76px,10vw,150px)",
+              fontSize: isMobile
+                ? "64px"
+                : "clamp(76px,10vw,150px)",
               lineHeight: "0.9",
               fontWeight: "800",
               color: "white",
-              marginBottom: "36px",
-              letterSpacing: "-5px",
+              marginBottom: "28px",
+              letterSpacing: "-4px",
             }}
           >
             Shivam
@@ -61,10 +74,10 @@ export default function Hero() {
           <p
             style={{
               color: "#D1D5DB",
-              fontSize: "22px",
-              lineHeight: "2",
+              fontSize: isMobile ? "18px" : "22px",
+              lineHeight: "1.9",
               maxWidth: "760px",
-              marginBottom: "55px",
+              marginBottom: "45px",
             }}
           >
             Business Head specializing in luxury real estate,
@@ -74,11 +87,15 @@ export default function Hero() {
             and execution-focused growth across Mumbai Metropolitan Region.
           </p>
 
+          {/* BUTTONS */}
           <div
             style={{
               display: "flex",
-              gap: "22px",
+              gap: "16px",
               flexWrap: "wrap",
+              justifyContent: isMobile
+                ? "center"
+                : "flex-start",
             }}
           >
 
@@ -88,14 +105,16 @@ export default function Hero() {
               style={{
                 background: "#C8A96B",
                 color: "#050505",
-                padding: "18px 36px",
+                padding: isMobile
+                  ? "16px 26px"
+                  : "18px 36px",
                 borderRadius: "14px",
                 textDecoration: "none",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: "15px",
               }}
             >
-              Download Resume
+              Resume
             </a>
 
             <a
@@ -105,11 +124,13 @@ export default function Hero() {
                 border:
                   "1px solid rgba(255,255,255,0.12)",
                 color: "white",
-                padding: "18px 36px",
+                padding: isMobile
+                  ? "16px 26px"
+                  : "18px 36px",
                 borderRadius: "14px",
                 textDecoration: "none",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: "15px",
                 background:
                   "rgba(255,255,255,0.03)",
                 backdropFilter: "blur(12px)",
@@ -128,6 +149,7 @@ export default function Hero() {
             display: "flex",
             justifyContent: "center",
             position: "relative",
+            order: isMobile ? 2 : 2,
           }}
         >
 
@@ -135,7 +157,9 @@ export default function Hero() {
           <div
             style={{
               width: "100%",
-              maxWidth: "500px",
+              maxWidth: isMobile
+                ? "320px"
+                : "500px",
               position: "relative",
               zIndex: 2,
             }}
@@ -160,13 +184,15 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
-              top: "40px",
-              left: "-40px",
+              top: isMobile ? "-20px" : "40px",
+              left: isMobile ? "-10px" : "-40px",
               background:
-                "rgba(15,15,15,0.85)",
+                "rgba(15,15,15,0.88)",
               border:
                 "1px solid rgba(200,169,107,0.2)",
-              padding: "24px 28px",
+              padding: isMobile
+                ? "16px 18px"
+                : "24px 28px",
               borderRadius: "22px",
               boxShadow:
                 "0 20px 60px rgba(0,0,0,0.4)",
@@ -178,8 +204,8 @@ export default function Hero() {
             <h3
               style={{
                 color: "#C8A96B",
-                fontSize: "36px",
-                marginBottom: "10px",
+                fontSize: isMobile ? "28px" : "36px",
+                marginBottom: "8px",
               }}
             >
               ₹4000Cr+
@@ -189,7 +215,7 @@ export default function Hero() {
               style={{
                 color: "#9F9F9F",
                 margin: 0,
-                fontSize: "15px",
+                fontSize: isMobile ? "12px" : "15px",
               }}
             >
               GMV Managed
@@ -201,13 +227,15 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
-              bottom: "40px",
-              right: "-40px",
+              bottom: isMobile ? "-20px" : "40px",
+              right: isMobile ? "-10px" : "-40px",
               background:
-                "rgba(15,15,15,0.85)",
+                "rgba(15,15,15,0.88)",
               border:
                 "1px solid rgba(200,169,107,0.2)",
-              padding: "24px 28px",
+              padding: isMobile
+                ? "16px 18px"
+                : "24px 28px",
               borderRadius: "22px",
               boxShadow:
                 "0 20px 60px rgba(0,0,0,0.4)",
@@ -219,8 +247,8 @@ export default function Hero() {
             <h3
               style={{
                 color: "#C8A96B",
-                fontSize: "36px",
-                marginBottom: "10px",
+                fontSize: isMobile ? "28px" : "36px",
+                marginBottom: "8px",
               }}
             >
               120+
@@ -230,10 +258,10 @@ export default function Hero() {
               style={{
                 color: "#9F9F9F",
                 margin: 0,
-                fontSize: "15px",
+                fontSize: isMobile ? "12px" : "15px",
               }}
             >
-              Properties Onboarded
+              Properties
             </p>
 
           </div>
