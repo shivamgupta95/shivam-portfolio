@@ -11,7 +11,7 @@ export default function CTA() {
       }}
     >
 
-      {/* BACKGROUND GLOW */}
+      {/* GLOW */}
       <div
         style={{
           position: "absolute",
@@ -83,9 +83,9 @@ export default function CTA() {
             }}
           >
             Open to strategic leadership opportunities,
-            real estate growth initiatives,
             operational scaling,
             acquisitions,
+            luxury real estate growth,
             and execution-focused business expansion.
           </p>
 
@@ -100,7 +100,7 @@ export default function CTA() {
           >
 
             <a
-              href="mailto:yourmail@gmail.com"
+              href="mailto:guptashivam251095@gmail.com"
               style={{
                 background: "#2563EB",
                 padding: "20px 34px",
@@ -117,7 +117,7 @@ export default function CTA() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
               target="_blank"
               style={{
                 border:
@@ -159,6 +159,5 @@ export default function CTA() {
       </div>
 
     </section>
-
   );
 }

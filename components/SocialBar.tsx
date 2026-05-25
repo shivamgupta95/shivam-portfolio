@@ -19,7 +19,7 @@ export default function SocialBar() {
 
       {/* LINKEDIN */}
       <a
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/shivam-gupta-a86963285"
         target="_blank"
         style={socialStyle}
       >
@@ -28,7 +28,7 @@ export default function SocialBar() {
 
       {/* EMAIL */}
       <a
-        href="mailto:yourmail@gmail.com"
+        href="mailto:guptashivam251095@gmail.com"
         style={socialStyle}
       >
         ✉️
@@ -45,7 +45,7 @@ export default function SocialBar() {
 
       {/* WHATSAPP */}
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/917738753396"
         target="_blank"
         style={socialStyle}
       >

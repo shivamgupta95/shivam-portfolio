@@ -12,7 +12,6 @@ export default function Footer() {
       }}
     >
 
-      {/* GLOW */}
       <div
         style={{
           position: "absolute",
@@ -36,7 +35,6 @@ export default function Footer() {
         }}
       >
 
-        {/* TOP */}
         <div
           style={{
             display: "flex",
@@ -155,14 +153,14 @@ export default function Footer() {
               >
 
                 <a
-                  href="mailto:yourmail@gmail.com"
+                  href="mailto:guptashivam251095@gmail.com"
                   style={linkStyle}
                 >
                   Email
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/shivam-gupta-a86963285"
                   target="_blank"
                   style={linkStyle}
                 >
@@ -213,7 +211,7 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            Designed with premium modern aesthetics.
+            Built with premium modern aesthetics.
           </p>
 
         </div>
