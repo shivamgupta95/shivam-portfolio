@@ -1,7 +1,9 @@
 "use client";
 
 export default function Hero() {
+
   return (
+
     <section
       style={{
         minHeight: "100vh",
@@ -15,7 +17,8 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* BLUR EFFECT */}
+
+      {/* GLOW */}
       <div
         style={{
           position: "absolute",
@@ -26,6 +29,7 @@ export default function Hero() {
           top: "-150px",
           left: "-150px",
           borderRadius: "50%",
+          animation: "floating 8s ease-in-out infinite",
         }}
       />
 
@@ -39,28 +43,32 @@ export default function Hero() {
           bottom: "-150px",
           right: "-150px",
           borderRadius: "50%",
+          animation: "floating 10s ease-in-out infinite",
         }}
       />
 
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1300px",
           width: "100%",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
           gap: "60px",
           alignItems: "center",
+          position: "relative",
           zIndex: 2,
         }}
       >
-        {/* LEFT SIDE */}
+
+        {/* LEFT */}
         <div>
+
           <p
             style={{
               color: "#60A5FA",
               textTransform: "uppercase",
               letterSpacing: "4px",
-              marginBottom: "20px",
+              marginBottom: "18px",
               fontSize: "14px",
               fontWeight: "600",
             }}
@@ -70,7 +78,7 @@ export default function Hero() {
 
           <h1
             style={{
-              fontSize: "clamp(48px, 8vw, 90px)",
+              fontSize: "clamp(52px,8vw,96px)",
               lineHeight: "1",
               marginBottom: "24px",
               fontWeight: "800",
@@ -84,16 +92,16 @@ export default function Hero() {
           <p
             style={{
               color: "#9CA3AF",
+              lineHeight: "2",
               fontSize: "18px",
-              lineHeight: "1.9",
+              maxWidth: "650px",
               marginBottom: "40px",
-              maxWidth: "600px",
             }}
           >
-            Business leader specializing in real estate operations,
-            acquisitions, luxury transactions, expansion strategy,
-            and execution-driven growth across Mumbai’s evolving
-            real estate ecosystem.
+            Business leader specializing in acquisitions,
+            luxury real estate, strategic expansion,
+            operational excellence, and execution-driven
+            business growth across Mumbai.
           </p>
 
           {/* BUTTONS */}
@@ -104,17 +112,20 @@ export default function Hero() {
               flexWrap: "wrap",
             }}
           >
+
             <a
               href="/resume.pdf"
               target="_blank"
+
               style={{
                 background: "#2563EB",
-                padding: "16px 28px",
-                borderRadius: "14px",
+                padding: "18px 30px",
+                borderRadius: "16px",
                 color: "white",
                 textDecoration: "none",
                 fontWeight: "600",
-                boxShadow: "0 0 25px rgba(37,99,235,0.4)",
+                boxShadow: "0 0 30px rgba(37,99,235,0.35)",
+                animation: "glowPulse 3s infinite",
               }}
             >
               Download Resume
@@ -123,62 +134,95 @@ export default function Hero() {
             <a
               href="https://www.linkedin.com/in/shivam-gupta-a86963285"
               target="_blank"
+
               style={{
-                border: "1px solid rgba(255,255,255,0.15)",
-                padding: "16px 28px",
-                borderRadius: "14px",
+                border: "1px solid rgba(255,255,255,0.1)",
+                padding: "18px 30px",
+                borderRadius: "16px",
                 color: "white",
                 textDecoration: "none",
                 fontWeight: "600",
-                backdropFilter: "blur(10px)",
+                backdropFilter: "blur(12px)",
               }}
             >
               LinkedIn Profile
             </a>
+
           </div>
+
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(2,1fr)",
-            gap: "20px",
+            gap: "24px",
           }}
         >
+
           {[
             {
               number: "₹4000Cr+",
               label: "GMV Managed",
             },
+
             {
               number: "120+",
               label: "Properties Onboarded",
             },
+
             {
               number: "25+",
               label: "Teams Led",
             },
+
             {
               number: "95%+",
               label: "Occupancy Optimization",
             },
+
           ].map((item, index) => (
+
             <div
               key={index}
+
               style={{
                 background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "24px",
-                padding: "30px",
-                backdropFilter: "blur(12px)",
+                borderRadius: "28px",
+                padding: "34px",
+                backdropFilter: "blur(14px)",
+                transition: "0.35s",
+                animation: "floating 6s ease-in-out infinite",
+              }}
+
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform =
+                  "translateY(-10px) scale(1.02)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(96,165,250,0.35)";
+
+                e.currentTarget.style.boxShadow =
+                  "0 0 35px rgba(37,99,235,0.15)";
+              }}
+
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform =
+                  "translateY(0px) scale(1)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(255,255,255,0.08)";
+
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
+
               <h2
                 style={{
-                  fontSize: "32px",
-                  marginBottom: "12px",
-                  color: "white",
+                  fontSize: "36px",
+                  marginBottom: "14px",
                 }}
               >
                 {item.number}
@@ -187,15 +231,20 @@ export default function Hero() {
               <p
                 style={{
                   color: "#9CA3AF",
-                  lineHeight: "1.6",
+                  lineHeight: "1.7",
                 }}
               >
                 {item.label}
               </p>
+
             </div>
+
           ))}
+
         </div>
+
       </div>
+
     </section>
   );
 }

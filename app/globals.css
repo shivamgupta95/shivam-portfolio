@@ -15,6 +15,75 @@ body {
   overflow-x: hidden;
 }
 
+/* SMOOTH ANIMATIONS */
+section {
+  animation: fadeUp 1s ease;
+}
+
+/* LINKS */
 a {
   color: inherit;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(96,165,250,0.35);
+  border-radius: 20px;
+}
+
+/* FADE UP */
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+/* FLOATING EFFECT */
+@keyframes floating {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* GLOW PULSE */
+@keyframes glowPulse {
+
+  0% {
+    box-shadow: 0 0 0 rgba(37,99,235,0);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(37,99,235,0.25);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(37,99,235,0);
+  }
+
 }
