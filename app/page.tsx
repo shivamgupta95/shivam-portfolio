@@ -10,6 +10,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import Loader from "../components/Loader";
+import Cursor from "../components/Cursor";
 
 export default function Home() {
 
@@ -24,6 +25,8 @@ export default function Home() {
     >
 
       <Loader />
+
+      <Cursor />
 
       <Navbar />
 
