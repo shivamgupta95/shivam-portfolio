@@ -6,115 +6,54 @@ export default function Footer() {
 
     <footer
       style={{
-        padding: "80px 20px 40px",
-        borderTop: "1px solid rgba(255,255,255,0.08)",
+        padding: "40px 24px",
+        borderTop:
+          "1px solid rgba(255,255,255,0.08)",
+        textAlign: "center",
       }}
     >
 
-      <div
+      <p
         style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "30px",
-          flexWrap: "wrap",
-          alignItems: "center",
+          color: "#8F8F8F",
+          marginBottom: "18px",
+          fontSize: "15px",
         }}
       >
-
-        <div>
-
-          <h2
-            style={{
-              color: "white",
-              marginBottom: "12px",
-              fontSize: "30px",
-            }}
-          >
-            Shivam Gupta
-          </h2>
-
-          <p
-            style={{
-              color: "#9CA3AF",
-              lineHeight: "1.8",
-              maxWidth: "600px",
-            }}
-          >
-            Business Head focused on acquisitions,
-            luxury real estate growth,
-            operational excellence,
-            and strategic expansion.
-          </p>
-
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "18px",
-            flexWrap: "wrap",
-          }}
-        >
-
-          <a
-            href="mailto:officialshivamgupta25@gmail.com"
-            style={linkStyle}
-          >
-            Email
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/shivam-gupta-a86963285"
-            target="_blank"
-            style={linkStyle}
-          >
-            LinkedIn
-          </a>
-
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            style={linkStyle}
-          >
-            Resume
-          </a>
-
-        </div>
-
-      </div>
+        © 2026 Shivam Gupta. All rights reserved.
+      </p>
 
       <div
         style={{
-          maxWidth: "1200px",
-          margin: "40px auto 0",
-          paddingTop: "30px",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
           display: "flex",
-          justifyContent: "space-between",
-          gap: "20px",
+          justifyContent: "center",
+          gap: "18px",
           flexWrap: "wrap",
         }}
       >
 
-        <p
-          style={{
-            color: "#6B7280",
-            margin: 0,
-          }}
+        <a
+          href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+          target="_blank"
+          style={linkStyle}
         >
-          © 2026 Shivam Gupta
-        </p>
+          LinkedIn
+        </a>
 
-        <p
-          style={{
-            color: "#6B7280",
-            margin: 0,
-          }}
+        <a
+          href="mailto:officialshivamgupta25@gmail.com"
+          style={linkStyle}
         >
-          Premium Executive Portfolio
-        </p>
+          Email
+        </a>
+
+        <a
+          href="/shivam-gupta-resume-2026.pdf"
+          target="_blank"
+          style={linkStyle}
+        >
+          Resume
+        </a>
 
       </div>
 
@@ -124,7 +63,9 @@ export default function Footer() {
 }
 
 const linkStyle = {
-  color: "#D1D5DB",
+
+  color: "#C8A96B",
   textDecoration: "none",
-  fontWeight: "600",
-};
+  fontSize: "15px",
+
+} as React.CSSProperties;

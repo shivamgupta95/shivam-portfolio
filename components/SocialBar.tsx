@@ -21,7 +21,6 @@ export default function SocialBar() {
       }}
     >
 
-      {/* LINKEDIN */}
       <a
         href="https://www.linkedin.com/in/shivam-gupta-a86963285"
         target="_blank"
@@ -30,7 +29,6 @@ export default function SocialBar() {
         LI
       </a>
 
-      {/* EMAIL */}
       <a
         href="mailto:officialshivamgupta25@gmail.com"
         style={socialStyle(isMobile)}
@@ -38,16 +36,14 @@ export default function SocialBar() {
         @
       </a>
 
-      {/* RESUME */}
       <a
-        href="/resume.pdf"
+        href="/shivam-gupta-resume-2026.pdf"
         target="_blank"
         style={socialStyle(isMobile)}
       >
         CV
       </a>
 
-      {/* WHATSAPP */}
       <a
         href="https://wa.me/917738753396"
         target="_blank"
