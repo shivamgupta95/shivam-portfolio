@@ -1,6 +1,32 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+
+  const [position, setPosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  useEffect(() => {
+
+    const move = (e: MouseEvent) => {
+
+      setPosition({
+        x: e.clientX / 50,
+        y: e.clientY / 50,
+      });
+
+    };
+
+    window.addEventListener("mousemove", move);
+
+    return () => {
+      window.removeEventListener("mousemove", move);
+    };
+
+  }, []);
 
   return (
 
@@ -18,7 +44,7 @@ export default function Hero() {
       }}
     >
 
-      {/* GLOW */}
+      {/* GLOW 1 */}
       <div
         style={{
           position: "absolute",
@@ -26,13 +52,15 @@ export default function Hero() {
           height: "500px",
           background: "rgba(59,130,246,0.15)",
           filter: "blur(120px)",
-          top: "-150px",
-          left: "-150px",
+          top: `${-150 + position.y}px`,
+          left: `${-150 + position.x}px`,
           borderRadius: "50%",
           animation: "floating 8s ease-in-out infinite",
+          transition: "0.2s",
         }}
       />
 
+      {/* GLOW 2 */}
       <div
         style={{
           position: "absolute",
@@ -40,10 +68,11 @@ export default function Hero() {
           height: "500px",
           background: "rgba(168,85,247,0.15)",
           filter: "blur(120px)",
-          bottom: "-150px",
-          right: "-150px",
+          bottom: `${-150 - position.y}px`,
+          right: `${-150 - position.x}px`,
           borderRadius: "50%",
           animation: "floating 10s ease-in-out infinite",
+          transition: "0.2s",
         }}
       />
 
