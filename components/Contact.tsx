@@ -1,10 +1,35 @@
+"use client";
+
 export default function Contact() {
+
+  const contacts = [
+
+    {
+      title: "Email",
+      value: "guptashivam251095@gmail.com",
+      link: "mailto:guptashivam251095@gmail.com",
+    },
+
+    {
+      title: "LinkedIn",
+      value: "linkedin.com/in/shivam-gupta-a86963285",
+      link: "https://www.linkedin.com/in/shivam-gupta-a86963285",
+    },
+
+    {
+      title: "Phone",
+      value: "+91 7738753396",
+      link: "tel:+917738753396",
+    },
+
+  ];
+
   return (
+
     <section
       style={{
-        padding: "140px 24px 180px",
+        padding: "120px 20px",
         position: "relative",
-        overflow: "hidden"
       }}
     >
 
@@ -12,14 +37,13 @@ export default function Contact() {
       <div
         style={{
           position: "absolute",
-          bottom: "-200px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "700px",
-          height: "700px",
-          background: "rgba(59,130,246,0.12)",
-          filter: "blur(140px)",
-          borderRadius: "50%"
+          width: "450px",
+          height: "450px",
+          background: "rgba(59,130,246,0.08)",
+          filter: "blur(120px)",
+          top: "0",
+          right: "0",
+          borderRadius: "50%",
         }}
       />
 
@@ -29,87 +53,54 @@ export default function Contact() {
           margin: "0 auto",
           position: "relative",
           zIndex: 2,
-          textAlign: "center"
         }}
       >
 
         {/* TOP */}
-        <p
-          style={{
-            color: "#60A5FA",
-            textTransform: "uppercase",
-            letterSpacing: "5px",
-            fontSize: "14px",
-            marginBottom: "24px"
-          }}
-        >
-          Let’s Connect
-        </p>
-
-        <h2
-          style={{
-            fontSize: "clamp(48px,6vw,90px)",
-            lineHeight: "1.1",
-            marginBottom: "40px"
-          }}
-        >
-          Building Growth Through Strategy, Leadership & Execution
-        </h2>
-
-        <p
-          style={{
-            color: "#9CA3AF",
-            fontSize: "22px",
-            lineHeight: "1.9",
-            maxWidth: "900px",
-            margin: "0 auto 60px"
-          }}
-        >
-          I’m always open to connecting with professionals, founders,
-          leadership teams, and organizations focused on business growth,
-          operational scale, acquisitions, and expansion opportunities.
-        </p>
-
-        {/* BUTTONS */}
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-            marginBottom: "100px"
+            textAlign: "center",
+            marginBottom: "90px",
           }}
         >
 
-          <a
-            href="mailto:guptashivam251095@gmail.com"
+          <p
             style={{
-              background: "#2563EB",
-              color: "white",
-              padding: "20px 36px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              boxShadow: "0 0 30px rgba(37,99,235,0.35)"
+              color: "#60A5FA",
+              textTransform: "uppercase",
+              letterSpacing: "4px",
+              marginBottom: "18px",
+              fontSize: "14px",
+              fontWeight: "600",
             }}
           >
-            Email Me
-          </a>
+            Contact
+          </p>
 
-          <a
-            href="https://www.linkedin.com/in/shivam-gupta-a86963285"
-            target="_blank"
+          <h2
             style={{
-              border: "1px solid rgba(255,255,255,0.12)",
-              padding: "20px 36px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              color: "white",
-              background: "rgba(255,255,255,0.03)"
+              fontSize: "clamp(42px,7vw,72px)",
+              lineHeight: "1.1",
+              marginBottom: "24px",
             }}
           >
-            LinkedIn Profile
-          </a>
+            Let’s Build
+            <br />
+            Something Bigger
+          </h2>
+
+          <p
+            style={{
+              color: "#9CA3AF",
+              maxWidth: "850px",
+              margin: "0 auto",
+              lineHeight: "1.9",
+              fontSize: "18px",
+            }}
+          >
+            Open to leadership opportunities, strategic business discussions,
+            real estate collaborations, and growth-focused partnerships.
+          </p>
 
         </div>
 
@@ -117,108 +108,100 @@ export default function Contact() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-            gap: "28px"
+            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+            gap: "28px",
+            marginBottom: "50px",
           }}
         >
 
-          {/* CARD */}
-          <div
+          {contacts.map((item, index) => (
+
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+
+              style={{
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: "28px",
+                padding: "36px",
+                textDecoration: "none",
+                backdropFilter: "blur(12px)",
+                transition: "0.35s",
+                display: "block",
+              }}
+
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.border =
+                  "1px solid rgba(96,165,250,0.35)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 35px rgba(37,99,235,0.15)";
+              }}
+
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0px)";
+                e.currentTarget.style.border =
+                  "1px solid rgba(255,255,255,0.08)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+
+              <p
+                style={{
+                  color: "#60A5FA",
+                  marginBottom: "18px",
+                  textTransform: "uppercase",
+                  letterSpacing: "3px",
+                  fontSize: "13px",
+                  fontWeight: "600",
+                }}
+              >
+                {item.title}
+              </p>
+
+              <h3
+                style={{
+                  color: "white",
+                  fontSize: "24px",
+                  lineHeight: "1.5",
+                  wordBreak: "break-word",
+                }}
+              >
+                {item.value}
+              </h3>
+
+            </a>
+
+          ))}
+
+        </div>
+
+        {/* CTA */}
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+
             style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "28px",
-              padding: "40px"
+              background: "#2563EB",
+              color: "white",
+              textDecoration: "none",
+              padding: "18px 34px",
+              borderRadius: "16px",
+              fontWeight: "600",
+              display: "inline-block",
+              boxShadow: "0 0 25px rgba(37,99,235,0.35)",
             }}
           >
-
-            <h3
-              style={{
-                marginBottom: "18px",
-                fontSize: "28px"
-              }}
-            >
-              Location
-            </h3>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                fontSize: "18px"
-              }}
-            >
-              Mumbai, Maharashtra
-            </p>
-
-          </div>
-
-          {/* CARD */}
-          <div
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "28px",
-              padding: "40px"
-            }}
-          >
-
-            <h3
-              style={{
-                marginBottom: "18px",
-                fontSize: "28px"
-              }}
-            >
-              Contact
-            </h3>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                fontSize: "18px",
-                lineHeight: "1.8"
-              }}
-            >
-              +91 7738753396
-              <br />
-              guptashivam251095@gmail.com
-            </p>
-
-          </div>
-
-          {/* CARD */}
-          <div
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "28px",
-              padding: "40px"
-            }}
-          >
-
-            <h3
-              style={{
-                marginBottom: "18px",
-                fontSize: "28px"
-              }}
-            >
-              Expertise
-            </h3>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                fontSize: "18px",
-                lineHeight: "1.8"
-              }}
-            >
-              Business Growth
-              <br />
-              Real Estate Operations
-              <br />
-              Strategic Expansion
-            </p>
-
-          </div>
+            Download Resume
+          </a>
 
         </div>
 
