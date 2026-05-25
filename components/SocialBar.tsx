@@ -23,7 +23,7 @@ export default function SocialBar() {
         target="_blank"
         style={socialStyle}
       >
-        💼
+        in
       </a>
 
       {/* EMAIL */}
@@ -31,7 +31,7 @@ export default function SocialBar() {
         href="mailto:guptashivam251095@gmail.com"
         style={socialStyle}
       >
-        ✉️
+        @
       </a>
 
       {/* RESUME */}
@@ -40,7 +40,7 @@ export default function SocialBar() {
         target="_blank"
         style={socialStyle}
       >
-        📄
+        CV
       </a>
 
       {/* WHATSAPP */}
@@ -49,7 +49,7 @@ export default function SocialBar() {
         target="_blank"
         style={socialStyle}
       >
-        💬
+        WA
       </a>
 
     </div>
@@ -68,7 +68,8 @@ const socialStyle = {
   alignItems: "center",
   justifyContent: "center",
   textDecoration: "none",
-  fontSize: "28px",
+  fontSize: "18px",
+  fontWeight: "700",
+  color: "white",
   boxShadow: "0 0 30px rgba(0,0,0,0.25)",
-  transition: "0.35s",
 };

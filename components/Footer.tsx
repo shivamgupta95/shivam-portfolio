@@ -6,224 +6,125 @@ export default function Footer() {
 
     <footer
       style={{
-        position: "relative",
-        padding: "100px 20px 50px",
-        overflow: "hidden",
+        padding: "80px 20px 40px",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
       }}
     >
 
       <div
         style={{
-          position: "absolute",
-          width: "600px",
-          height: "600px",
-          background:
-            "radial-gradient(circle, rgba(37,99,235,0.18), transparent 70%)",
-          filter: "blur(120px)",
-          bottom: "-250px",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-      />
-
-      <div
-        style={{
-          maxWidth: "1300px",
+          maxWidth: "1200px",
           margin: "0 auto",
-          position: "relative",
-          zIndex: 2,
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "30px",
+          flexWrap: "wrap",
+          alignItems: "center",
         }}
       >
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "60px",
-            flexWrap: "wrap",
-            marginBottom: "70px",
-          }}
-        >
+        <div>
 
-          {/* LEFT */}
-          <div
+          <h2
             style={{
-              flex: 1,
-              minWidth: "280px",
+              color: "white",
+              marginBottom: "12px",
+              fontSize: "30px",
             }}
           >
+            Shivam Gupta
+          </h2>
 
-            <h2
-              style={{
-                fontSize: "48px",
-                marginBottom: "22px",
-                color: "white",
-                lineHeight: "1.1",
-              }}
-            >
-              Shivam Gupta
-            </h2>
-
-            <p
-              style={{
-                color: "#9CA3AF",
-                lineHeight: "2",
-                fontSize: "18px",
-                maxWidth: "650px",
-              }}
-            >
-              Business Head specializing in acquisitions,
-              luxury real estate, strategic expansion,
-              operational excellence,
-              and execution-focused business growth
-              across Mumbai Metropolitan Region.
-            </p>
-
-          </div>
-
-          {/* RIGHT */}
-          <div
+          <p
             style={{
-              display: "flex",
-              gap: "80px",
-              flexWrap: "wrap",
+              color: "#9CA3AF",
+              lineHeight: "1.8",
+              maxWidth: "600px",
             }}
           >
-
-            {/* QUICK LINKS */}
-            <div>
-
-              <h3
-                style={{
-                  color: "white",
-                  marginBottom: "24px",
-                  fontSize: "22px",
-                }}
-              >
-                Quick Links
-              </h3>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "16px",
-                }}
-              >
-
-                <a href="#about" style={linkStyle}>
-                  About
-                </a>
-
-                <a href="#timeline" style={linkStyle}>
-                  Experience
-                </a>
-
-                <a href="#leadership" style={linkStyle}>
-                  Leadership
-                </a>
-
-                <a href="#contact" style={linkStyle}>
-                  Contact
-                </a>
-
-              </div>
-
-            </div>
-
-            {/* CONNECT */}
-            <div>
-
-              <h3
-                style={{
-                  color: "white",
-                  marginBottom: "24px",
-                  fontSize: "22px",
-                }}
-              >
-                Connect
-              </h3>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "16px",
-                }}
-              >
-
-                <a
-                  href="mailto:guptashivam251095@gmail.com"
-                  style={linkStyle}
-                >
-                  Email
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/shivam-gupta-a86963285"
-                  target="_blank"
-                  style={linkStyle}
-                >
-                  LinkedIn
-                </a>
-
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  style={linkStyle}
-                >
-                  Resume
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
+            Business Head focused on acquisitions,
+            luxury real estate growth,
+            operational excellence,
+            and strategic expansion.
+          </p>
 
         </div>
 
-        {/* BOTTOM */}
         <div
           style={{
-            borderTop:
-              "1px solid rgba(255,255,255,0.08)",
-            paddingTop: "35px",
             display: "flex",
-            justifyContent: "space-between",
-            gap: "20px",
+            gap: "18px",
             flexWrap: "wrap",
           }}
         >
 
-          <p
-            style={{
-              color: "#6B7280",
-              margin: 0,
-            }}
+          <a
+            href="mailto:guptashivam251095@gmail.com"
+            style={linkStyle}
           >
-            © 2026 Shivam Gupta. All rights reserved.
-          </p>
+            Email
+          </a>
 
-          <p
-            style={{
-              color: "#6B7280",
-              margin: 0,
-            }}
+          <a
+            href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+            target="_blank"
+            style={linkStyle}
           >
-            Built with premium modern aesthetics.
-          </p>
+            LinkedIn
+          </a>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            style={linkStyle}
+          >
+            Resume
+          </a>
 
         </div>
 
       </div>
 
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "40px auto 0",
+          paddingTop: "30px",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "20px",
+          flexWrap: "wrap",
+        }}
+      >
+
+        <p
+          style={{
+            color: "#6B7280",
+            margin: 0,
+          }}
+        >
+          © 2026 Shivam Gupta
+        </p>
+
+        <p
+          style={{
+            color: "#6B7280",
+            margin: 0,
+          }}
+        >
+          Premium Executive Portfolio
+        </p>
+
+      </div>
+
     </footer>
+
   );
 }
 
 const linkStyle = {
-  color: "#9CA3AF",
+  color: "#D1D5DB",
   textDecoration: "none",
-  fontSize: "17px",
+  fontWeight: "600",
 };
