@@ -53,29 +53,34 @@ export default function Home() {
       }}
     >
 
-      {/* CINEMATIC BACKGROUND */}
-      <div
-        style={{
-          position: "fixed",
-          inset: 0,
-          backgroundImage:
-            `url(${backgrounds[currentBg]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          transition: "background-image 1.2s ease-in-out",
-          zIndex: -5,
-          transform: "scale(1.03)",
-        }}
-      />
+      {/* BACKGROUND LAYERS */}
+      {backgrounds.map((bg, index) => (
 
-      {/* DARK LUXURY OVERLAY */}
+        <div
+          key={index}
+          style={{
+            position: "fixed",
+            inset: 0,
+            backgroundImage: `url(${bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            zIndex: -6 + index,
+            opacity: currentBg === index ? 1 : 0,
+            transition: "opacity 1.8s ease-in-out",
+            transform: "scale(1.03)",
+          }}
+        />
+
+      ))}
+
+      {/* DARK OVERLAY */}
       <div
         style={{
           position: "fixed",
           inset: 0,
           background:
             "linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.88))",
-          zIndex: -4,
+          zIndex: -1,
         }}
       />
 
