@@ -76,8 +76,6 @@ export default function Hero() {
 
           borderRadius: "50%",
 
-          animation: "floating 8s ease-in-out infinite",
-
           transition: "0.2s",
         }}
       />
@@ -101,15 +99,13 @@ export default function Hero() {
 
           borderRadius: "50%",
 
-          animation: "floating 10s ease-in-out infinite",
-
           transition: "0.2s",
         }}
       />
 
       <div
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1400px",
 
           width: "100%",
 
@@ -118,7 +114,7 @@ export default function Hero() {
           gridTemplateColumns:
             "repeat(auto-fit,minmax(320px,1fr))",
 
-          gap: "60px",
+          gap: "70px",
 
           alignItems: "center",
 
@@ -128,7 +124,7 @@ export default function Hero() {
         }}
       >
 
-        {/* LEFT */}
+        {/* LEFT SIDE */}
         <div>
 
           <p
@@ -137,13 +133,13 @@ export default function Hero() {
 
               textTransform: "uppercase",
 
-              letterSpacing: "4px",
+              letterSpacing: "5px",
 
-              marginBottom: "18px",
+              marginBottom: "22px",
 
               fontSize: "14px",
 
-              fontWeight: "600",
+              fontWeight: "700",
             }}
           >
             Business Head • Real Estate Strategist
@@ -151,11 +147,11 @@ export default function Hero() {
 
           <h1
             style={{
-              fontSize: "clamp(52px,8vw,96px)",
+              fontSize: "clamp(70px,9vw,120px)",
 
-              lineHeight: "1",
+              lineHeight: "0.95",
 
-              marginBottom: "24px",
+              marginBottom: "30px",
 
               fontWeight: "800",
             }}
@@ -171,11 +167,11 @@ export default function Hero() {
 
               lineHeight: "2",
 
-              fontSize: "18px",
+              fontSize: "22px",
 
-              maxWidth: "650px",
+              maxWidth: "760px",
 
-              marginBottom: "40px",
+              marginBottom: "50px",
             }}
           >
             Business leader specializing in acquisitions,
@@ -203,43 +199,45 @@ export default function Hero() {
               style={{
                 background: "#2563EB",
 
-                padding: "18px 30px",
+                padding: "20px 36px",
 
-                borderRadius: "16px",
+                borderRadius: "18px",
 
                 color: "white",
 
                 textDecoration: "none",
 
-                fontWeight: "600",
+                fontWeight: "700",
+
+                fontSize: "18px",
 
                 boxShadow:
-                  "0 0 30px rgba(37,99,235,0.35)",
-
-                animation: "glowPulse 3s infinite",
+                  "0 0 35px rgba(37,99,235,0.35)",
               }}
             >
               Download Resume
             </a>
 
             <a
-              href="https://www.linkedin.com/in/shivam-gupta-a86963285"
+              href="https://www.linkedin.com"
 
               target="_blank"
 
               style={{
                 border:
-                  "1px solid rgba(255,255,255,0.1)",
+                  "1px solid rgba(255,255,255,0.12)",
 
-                padding: "18px 30px",
+                padding: "20px 36px",
 
-                borderRadius: "16px",
+                borderRadius: "18px",
 
                 color: "white",
 
                 textDecoration: "none",
 
-                fontWeight: "600",
+                fontWeight: "700",
+
+                fontSize: "18px",
 
                 backdropFilter: "blur(12px)",
               }}
@@ -251,86 +249,236 @@ export default function Hero() {
 
         </div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE */}
         <div
           style={{
             display: "grid",
 
-            gridTemplateColumns: "repeat(2,1fr)",
+            gridTemplateColumns: "1fr 1fr",
 
-            gap: "24px",
+            gap: "28px",
           }}
         >
 
-          {[
-            {
-              number: "₹4000Cr+",
-              label: "GMV Managed",
-            },
-
-            {
-              number: "120+",
-              label: "Properties Onboarded",
-            },
-
-            {
-              number: "25+",
-              label: "Teams Led",
-            },
-
-            {
-              number: "95%+",
-              label: "Occupancy Optimization",
-            },
-
-          ].map((item, index) => (
+          {/* CARD 1 */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "32px",
+              padding: "40px",
+              minHeight: "230px",
+              position: "relative",
+              overflow: "hidden",
+              backdropFilter: "blur(20px)",
+            }}
+          >
 
             <div
-              key={index}
-
               style={{
-                background:
-                  "rgba(255,255,255,0.05)",
-
-                border:
-                  "1px solid rgba(255,255,255,0.08)",
-
-                borderRadius: "28px",
-
-                padding: "34px",
-
-                backdropFilter: "blur(14px)",
-
-                transition: "0.35s",
-
-                animation:
-                  "floating 6s ease-in-out infinite",
+                position: "absolute",
+                top: "28px",
+                right: "28px",
+                width: "64px",
+                height: "64px",
+                borderRadius: "20px",
+                background: "rgba(37,99,235,0.12)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#3B82F6",
+                fontSize: "34px",
               }}
             >
-
-              <h2
-                style={{
-                  fontSize: "36px",
-
-                  marginBottom: "14px",
-                }}
-              >
-                {item.number}
-              </h2>
-
-              <p
-                style={{
-                  color: "#9CA3AF",
-
-                  lineHeight: "1.7",
-                }}
-              >
-                {item.label}
-              </p>
-
+              📈
             </div>
 
-          ))}
+            <h3
+              style={{
+                fontSize: "58px",
+                marginBottom: "16px",
+                marginTop: "55px",
+                fontWeight: "700",
+              }}
+            >
+              ₹4000Cr+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                fontSize: "22px",
+              }}
+            >
+              GMV Managed
+            </p>
+
+          </div>
+
+          {/* CARD 2 */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "32px",
+              padding: "40px",
+              minHeight: "230px",
+              position: "relative",
+              overflow: "hidden",
+              backdropFilter: "blur(20px)",
+            }}
+          >
+
+            <div
+              style={{
+                position: "absolute",
+                top: "28px",
+                right: "28px",
+                width: "64px",
+                height: "64px",
+                borderRadius: "20px",
+                background: "rgba(37,99,235,0.12)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#3B82F6",
+                fontSize: "34px",
+              }}
+            >
+              🏠
+            </div>
+
+            <h3
+              style={{
+                fontSize: "58px",
+                marginBottom: "16px",
+                marginTop: "55px",
+                fontWeight: "700",
+              }}
+            >
+              120+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                fontSize: "22px",
+              }}
+            >
+              Properties Onboarded
+            </p>
+
+          </div>
+
+          {/* CARD 3 */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "32px",
+              padding: "40px",
+              minHeight: "230px",
+              position: "relative",
+              overflow: "hidden",
+              backdropFilter: "blur(20px)",
+            }}
+          >
+
+            <div
+              style={{
+                position: "absolute",
+                top: "28px",
+                right: "28px",
+                width: "64px",
+                height: "64px",
+                borderRadius: "20px",
+                background: "rgba(37,99,235,0.12)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#3B82F6",
+                fontSize: "34px",
+              }}
+            >
+              👥
+            </div>
+
+            <h3
+              style={{
+                fontSize: "58px",
+                marginBottom: "16px",
+                marginTop: "55px",
+                fontWeight: "700",
+              }}
+            >
+              25+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                fontSize: "22px",
+              }}
+            >
+              Teams Led
+            </p>
+
+          </div>
+
+          {/* CARD 4 */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "32px",
+              padding: "40px",
+              minHeight: "230px",
+              position: "relative",
+              overflow: "hidden",
+              backdropFilter: "blur(20px)",
+            }}
+          >
+
+            <div
+              style={{
+                position: "absolute",
+                top: "28px",
+                right: "28px",
+                width: "64px",
+                height: "64px",
+                borderRadius: "20px",
+                background: "rgba(37,99,235,0.12)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#3B82F6",
+                fontSize: "34px",
+              }}
+            >
+              📊
+            </div>
+
+            <h3
+              style={{
+                fontSize: "58px",
+                marginBottom: "16px",
+                marginTop: "55px",
+                fontWeight: "700",
+              }}
+            >
+              95%+
+            </h3>
+
+            <p
+              style={{
+                color: "#9CA3AF",
+                fontSize: "22px",
+              }}
+            >
+              Occupancy Optimization
+            </p>
+
+          </div>
 
         </div>
 
