@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
+import Particles from "../components/Particles";
 
 export default function Home() {
 
@@ -21,8 +22,12 @@ export default function Home() {
         background: "#050816",
         color: "white",
         minHeight: "100vh",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+
+      <Particles />
 
       <Loader />
 
