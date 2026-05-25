@@ -1,145 +1,131 @@
+"use client";
+
 export default function Stats() {
 
   const stats = [
+
     {
-      title: "₹4,000+ Crore",
-      subtitle: "GMV Portfolio Managed",
-      description:
-        "Led and managed large-scale real estate portfolios across Mumbai Metropolitan Region with strategic operational oversight."
+      number: "₹4000Cr+",
+      label: "GMV Managed",
     },
+
     {
-      title: "₹200+ Crore",
-      subtitle: "Luxury Transactions",
-      description:
-        "Handled premium and high-value real estate transactions involving HNI and investor-driven acquisitions."
+      number: "120+",
+      label: "Properties Onboarded",
     },
+
     {
-      title: "25+",
-      subtitle: "Teams Led",
-      description:
-        "Built and managed multi-functional teams across acquisitions, operations, sales, and strategic expansion."
+      number: "25+",
+      label: "Teams Led",
     },
+
     {
-      title: "97%",
-      subtitle: "Customer Satisfaction",
-      description:
-        "Maintained high operational standards and client satisfaction through process optimization and relationship management."
-    }
+      number: "95%+",
+      label: "Occupancy Optimization",
+    },
+
   ];
 
   return (
+
     <section
       style={{
-        padding: "140px 24px",
-        position: "relative"
+        padding: "60px 20px 120px",
+        position: "relative",
       }}
     >
 
+      {/* GLOW */}
       <div
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto"
+          position: "absolute",
+          width: "450px",
+          height: "450px",
+          background: "rgba(59,130,246,0.08)",
+          filter: "blur(120px)",
+          top: "0",
+          left: "0",
+          borderRadius: "50%",
+        }}
+      />
+
+      <div
+        style={{
+          maxWidth: "1300px",
+          margin: "0 auto",
+          position: "relative",
+          zIndex: 2,
         }}
       >
 
-        {/* TOP */}
-        <div
-          style={{
-            marginBottom: "80px",
-            textAlign: "center"
-          }}
-        >
-
-          <p
-            style={{
-              color: "#60A5FA",
-              textTransform: "uppercase",
-              letterSpacing: "5px",
-              fontSize: "14px",
-              marginBottom: "24px"
-            }}
-          >
-            Business Impact
-          </p>
-
-          <h2
-            style={{
-              fontSize: "clamp(42px,5vw,72px)",
-              lineHeight: "1.1",
-              marginBottom: "24px"
-            }}
-          >
-            Driving Scale, Revenue & Expansion
-          </h2>
-
-          <p
-            style={{
-              color: "#9CA3AF",
-              fontSize: "20px",
-              maxWidth: "900px",
-              margin: "0 auto",
-              lineHeight: "1.8"
-            }}
-          >
-            Over the years, I have contributed across acquisitions,
-            operations, strategic growth, revenue scaling, and high-value
-            real estate execution across Mumbai’s competitive market landscape.
-          </p>
-
-        </div>
-
-        {/* CARDS */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
-            gap: "28px"
+            gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+            gap: "28px",
           }}
         >
 
           {stats.map((item, index) => (
+
             <div
               key={index}
+
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "32px",
-                padding: "40px",
-                backdropFilter: "blur(20px)",
-                transition: "0.3s"
+                borderRadius: "30px",
+                padding: "45px 35px",
+                textAlign: "center",
+                backdropFilter: "blur(14px)",
+                transition: "0.35s",
+                cursor: "pointer",
+              }}
+
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform =
+                  "translateY(-12px) scale(1.02)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(96,165,250,0.35)";
+
+                e.currentTarget.style.boxShadow =
+                  "0 0 40px rgba(37,99,235,0.18)";
+              }}
+
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform =
+                  "translateY(0px) scale(1)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(255,255,255,0.08)";
+
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
 
-              <h3
+              <h2
                 style={{
-                  fontSize: "56px",
-                  marginBottom: "16px"
+                  fontSize: "clamp(40px,6vw,64px)",
+                  marginBottom: "16px",
+                  color: "white",
                 }}
               >
-                {item.title}
-              </h3>
-
-              <h4
-                style={{
-                  fontSize: "22px",
-                  marginBottom: "24px",
-                  color: "white"
-                }}
-              >
-                {item.subtitle}
-              </h4>
+                {item.number}
+              </h2>
 
               <p
                 style={{
                   color: "#9CA3AF",
-                  lineHeight: "1.9",
-                  fontSize: "17px"
+                  fontSize: "18px",
+                  lineHeight: "1.6",
                 }}
               >
-                {item.description}
+                {item.label}
               </p>
 
             </div>
+
           ))}
 
         </div>
