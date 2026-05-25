@@ -1,48 +1,50 @@
+"use client";
+
 export default function Achievements() {
 
   const achievements = [
 
     {
-      number: "₹4,000Cr+",
+      number: "₹4000Cr+",
       title: "GMV Managed",
       description:
-        "Handled and contributed across large-scale real estate operations, luxury inventory management, acquisitions, and strategic business expansion initiatives across Mumbai."
-    },
-
-    {
-      number: "₹200Cr+",
-      title: "Luxury Transactions",
-      description:
-        "Managed premium property portfolios and luxury real estate transactions involving high-net-worth individuals, investors, and premium residential assets."
+        "Handled large-scale real estate operations, strategic expansion, luxury inventory management, and business growth initiatives across Mumbai."
     },
 
     {
       number: "120+",
       title: "Properties Onboarded",
       description:
-        "Successfully executed onboarding operations, acquisition expansion, owner coordination, and supply growth strategies across multiple real estate verticals."
+        "Successfully executed acquisition operations, onboarding systems, owner coordination, and supply expansion strategies."
     },
 
     {
       number: "25+",
       title: "Teams Led",
       description:
-        "Led cross-functional teams across operations, acquisitions, onboarding, customer management, strategic execution, and expansion-focused initiatives."
+        "Led cross-functional teams across acquisitions, operations, customer management, and strategic business execution."
     },
 
     {
       number: "95%+",
       title: "Occupancy Optimization",
       description:
-        "Contributed toward occupancy optimization strategies, operational efficiency improvements, and enhanced business profitability across managed assets."
+        "Improved occupancy rates, operational efficiency, and profitability through execution-focused management strategies."
+    },
+
+    {
+      number: "₹200Cr+",
+      title: "Luxury Transactions",
+      description:
+        "Managed premium real estate portfolios and high-value luxury property transactions across Mumbai."
     },
 
     {
       number: "9+ Years",
       title: "Industry Experience",
       description:
-        "Built strong expertise across operations leadership, strategic acquisitions, luxury sales, business development, and revenue-focused real estate execution."
-    }
+        "Built expertise across operations leadership, business growth, acquisitions, and execution-driven expansion."
+    },
 
   ];
 
@@ -50,43 +52,44 @@ export default function Achievements() {
 
     <section
       style={{
-        padding: "140px 24px",
-        position: "relative"
+        padding: "120px 20px",
+        position: "relative",
       }}
     >
 
       <div
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto"
+          maxWidth: "1300px",
+          margin: "0 auto",
         }}
       >
 
-        {/* HEADING */}
+        {/* TOP */}
         <div
           style={{
             textAlign: "center",
-            marginBottom: "90px"
+            marginBottom: "80px",
           }}
         >
 
           <p
             style={{
               color: "#60A5FA",
-              letterSpacing: "5px",
+              letterSpacing: "4px",
               textTransform: "uppercase",
+              marginBottom: "18px",
               fontSize: "14px",
-              marginBottom: "20px"
+              fontWeight: "600",
             }}
           >
-            Achievements & Impact
+            Achievements
           </p>
 
           <h2
             style={{
-              fontSize: "clamp(42px,5vw,72px)",
+              fontSize: "clamp(42px,7vw,72px)",
               lineHeight: "1.1",
-              marginBottom: "24px"
+              marginBottom: "24px",
             }}
           >
             Business Impact
@@ -97,15 +100,16 @@ export default function Achievements() {
           <p
             style={{
               color: "#9CA3AF",
-              fontSize: "20px",
-              lineHeight: "1.8",
-              maxWidth: "900px",
-              margin: "0 auto"
+              maxWidth: "850px",
+              margin: "0 auto",
+              lineHeight: "1.9",
+              fontSize: "18px",
             }}
           >
-            A proven track record of driving operational excellence,
-            acquisitions, strategic expansion, business growth,
-            and high-value execution across Mumbai’s evolving real estate ecosystem.
+            A proven track record of scaling operations,
+            driving acquisitions, optimizing business systems,
+            and executing growth-focused strategies across
+            Mumbai’s real estate ecosystem.
           </p>
 
         </div>
@@ -114,8 +118,8 @@ export default function Achievements() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))",
-            gap: "30px"
+            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+            gap: "28px",
           }}
         >
 
@@ -123,41 +127,58 @@ export default function Achievements() {
 
             <div
               key={index}
+
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "32px",
-                padding: "45px",
-                backdropFilter: "blur(20px)",
-                transition: "0.4s"
+                borderRadius: "28px",
+                padding: "36px",
+                backdropFilter: "blur(12px)",
+                transition: "0.35s",
+                cursor: "pointer",
+              }}
+
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.border =
+                  "1px solid rgba(96,165,250,0.4)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(37,99,235,0.18)";
+              }}
+
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0px)";
+                e.currentTarget.style.border =
+                  "1px solid rgba(255,255,255,0.08)";
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
 
-              <h3
+              <h2
                 style={{
-                  fontSize: "52px",
-                  marginBottom: "20px",
-                  color: "white"
+                  fontSize: "48px",
+                  marginBottom: "18px",
+                  color: "white",
                 }}
               >
                 {item.number}
-              </h3>
+              </h2>
 
-              <h4
+              <h3
                 style={{
-                  fontSize: "28px",
-                  marginBottom: "24px",
-                  color: "#60A5FA"
+                  color: "#60A5FA",
+                  marginBottom: "18px",
+                  fontSize: "24px",
                 }}
               >
                 {item.title}
-              </h4>
+              </h3>
 
               <p
                 style={{
                   color: "#9CA3AF",
                   lineHeight: "1.9",
-                  fontSize: "17px"
+                  fontSize: "16px",
                 }}
               >
                 {item.description}
