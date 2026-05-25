@@ -43,6 +43,15 @@ export default function SocialBar() {
         📄
       </a>
 
+      {/* WHATSAPP */}
+      <a
+        href="https://wa.me/917738753396"
+        target="_blank"
+        style={socialStyle}
+      >
+        💬
+      </a>
+
     </div>
 
   );
