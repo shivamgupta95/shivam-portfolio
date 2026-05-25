@@ -1,36 +1,50 @@
+"use client";
+
 export default function Expertise() {
 
   const expertise = [
 
     {
+      icon: "📈",
       title: "Business Expansion",
       description:
-        "Scaling real estate operations and driving strategic business growth across multiple verticals."
+        "Scaling real estate operations through structured expansion strategies, execution-focused growth systems, and market-driven business development."
     },
 
     {
-      title: "Strategic Acquisitions",
-      description:
-        "Managing acquisitions, onboarding, owner relationships, and expansion operations."
-    },
-
-    {
+      icon: "🏙️",
       title: "Luxury Real Estate",
       description:
-        "Handling premium property portfolios and high-value client relationships."
+        "Managing premium portfolios, luxury transactions, high-value relationships, and execution excellence across Mumbai’s premium market."
     },
 
     {
-      title: "Operations Leadership",
+      icon: "⚙️",
+      title: "Operational Excellence",
       description:
-        "Building operational systems, execution workflows, and scalable business processes."
+        "Building scalable systems, operational workflows, execution frameworks, and high-performance business operations."
     },
 
     {
-      title: "Revenue Growth",
+      icon: "🤝",
+      title: "Strategic Acquisitions",
       description:
-        "Driving occupancy growth, profitability improvement, and long-term business performance."
-    }
+        "Leading acquisitions, onboarding systems, owner relationships, supply expansion, and strategic market growth initiatives."
+    },
+
+    {
+      icon: "👥",
+      title: "Leadership & Team Building",
+      description:
+        "Driving accountability, leadership culture, operational discipline, and execution-focused performance management."
+    },
+
+    {
+      icon: "🚀",
+      title: "Growth Strategy",
+      description:
+        "Combining operational execution, market understanding, profitability optimization, and scalable business growth systems."
+    },
 
   ];
 
@@ -38,30 +52,50 @@ export default function Expertise() {
 
     <section
       style={{
-        padding: "120px 24px"
+        padding: "120px 20px",
+        position: "relative",
       }}
     >
 
+      {/* GLOW */}
       <div
         style={{
-          maxWidth: "1400px",
-          margin: "0 auto"
+          position: "absolute",
+          width: "500px",
+          height: "500px",
+          background: "rgba(59,130,246,0.08)",
+          filter: "blur(120px)",
+          top: "0",
+          right: "0",
+          borderRadius: "50%",
+        }}
+      />
+
+      <div
+        style={{
+          maxWidth: "1300px",
+          margin: "0 auto",
+          position: "relative",
+          zIndex: 2,
         }}
       >
 
+        {/* TOP */}
         <div
           style={{
             textAlign: "center",
-            marginBottom: "80px"
+            marginBottom: "90px",
           }}
         >
 
           <p
             style={{
               color: "#60A5FA",
-              letterSpacing: "4px",
               textTransform: "uppercase",
-              marginBottom: "20px"
+              letterSpacing: "4px",
+              marginBottom: "18px",
+              fontSize: "14px",
+              fontWeight: "600",
             }}
           >
             Expertise
@@ -69,32 +103,39 @@ export default function Expertise() {
 
           <h2
             style={{
-              fontSize: "64px",
-              marginBottom: "20px"
+              fontSize: "clamp(42px,7vw,72px)",
+              lineHeight: "1.1",
+              marginBottom: "24px",
             }}
           >
-            Core Expertise
+            Core Business
+            <br />
+            Expertise
           </h2>
 
           <p
             style={{
               color: "#9CA3AF",
-              maxWidth: "900px",
+              maxWidth: "850px",
               margin: "0 auto",
-              lineHeight: "1.8"
+              lineHeight: "1.9",
+              fontSize: "18px",
             }}
           >
-            Combining operational excellence, acquisitions,
-            strategic leadership, and execution-driven growth.
+            Combining leadership, strategic execution,
+            operational excellence, acquisitions,
+            luxury real estate management,
+            and scalable business growth.
           </p>
 
         </div>
 
+        {/* GRID */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "24px"
+            gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
+            gap: "28px",
           }}
         >
 
@@ -104,17 +145,68 @@ export default function Expertise() {
               key={index}
 
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.05)",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "24px",
-                padding: "36px"
+                borderRadius: "32px",
+                padding: "40px",
+                backdropFilter: "blur(14px)",
+                transition: "0.35s",
+                cursor: "pointer",
+                position: "relative",
+                overflow: "hidden",
+              }}
+
+              onMouseEnter={(e) => {
+
+                e.currentTarget.style.transform =
+                  "translateY(-12px) scale(1.02)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(96,165,250,0.35)";
+
+                e.currentTarget.style.boxShadow =
+                  "0 0 40px rgba(37,99,235,0.18)";
+
+              }}
+
+              onMouseLeave={(e) => {
+
+                e.currentTarget.style.transform =
+                  "translateY(0px) scale(1)";
+
+                e.currentTarget.style.border =
+                  "1px solid rgba(255,255,255,0.08)";
+
+                e.currentTarget.style.boxShadow = "none";
+
               }}
             >
 
+              {/* ICON */}
+              <div
+                style={{
+                  width: "72px",
+                  height: "72px",
+                  borderRadius: "22px",
+                  background: "rgba(96,165,250,0.12)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "34px",
+                  marginBottom: "28px",
+                  boxShadow:
+                    "0 0 25px rgba(37,99,235,0.15)",
+                }}
+              >
+                {item.icon}
+              </div>
+
               <h3
                 style={{
-                  fontSize: "28px",
-                  marginBottom: "20px"
+                  fontSize: "30px",
+                  lineHeight: "1.4",
+                  marginBottom: "20px",
+                  color: "white",
                 }}
               >
                 {item.title}
@@ -123,7 +215,8 @@ export default function Expertise() {
               <p
                 style={{
                   color: "#9CA3AF",
-                  lineHeight: "1.8"
+                  lineHeight: "1.9",
+                  fontSize: "16px",
                 }}
               >
                 {item.description}
