@@ -9,6 +9,7 @@ import Leadership from "../components/Leadership";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
+import Loader from "../components/Loader";
 
 export default function Home() {
 
@@ -21,6 +22,8 @@ export default function Home() {
         minHeight: "100vh",
       }}
     >
+
+      <Loader />
 
       <Navbar />
 
